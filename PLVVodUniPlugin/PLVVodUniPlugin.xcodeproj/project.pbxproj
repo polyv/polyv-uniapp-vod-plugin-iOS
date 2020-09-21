@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0031849324F7968C007E7F74 /* PLVTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031846324F7968C007E7F74 /* PLVTimer.m */; };
+		0031849424F7968C007E7F74 /* PLVTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031846424F7968C007E7F74 /* PLVTimer.h */; };
+		0031849524F7968C007E7F74 /* PLVMarquee.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031846624F7968C007E7F74 /* PLVMarquee.m */; };
+		0031849624F7968C007E7F74 /* PLVMarqueeViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031846724F7968C007E7F74 /* PLVMarqueeViewModel.h */; };
+		0031849724F7968C007E7F74 /* PLVMarquee.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031846824F7968C007E7F74 /* PLVMarquee.h */; };
+		0031849824F7968C007E7F74 /* PLVMarqueeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031846924F7968C007E7F74 /* PLVMarqueeViewModel.m */; };
+		0031849924F7968C007E7F74 /* ZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031846B24F7968C007E7F74 /* ZipArchive.h */; };
+		0031849A24F7968C007E7F74 /* crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 0031846D24F7968C007E7F74 /* crypt.c */; };
+		0031849B24F7968C007E7F74 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 0031846E24F7968C007E7F74 /* unzip.c */; };
+		0031849C24F7968C007E7F74 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 0031846F24F7968C007E7F74 /* zip.c */; };
+		0031849D24F7968C007E7F74 /* minishared.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031847024F7968C007E7F74 /* minishared.h */; };
+		0031849E24F7968C007E7F74 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 0031847124F7968C007E7F74 /* ioapi.c */; };
+		0031849F24F7968C007E7F74 /* ioapi_mem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031847224F7968C007E7F74 /* ioapi_mem.h */; };
+		003184A024F7968C007E7F74 /* ioapi_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 0031847324F7968C007E7F74 /* ioapi_buf.c */; };
+		003184A124F7968C007E7F74 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031847424F7968C007E7F74 /* crypt.h */; };
+		003184A224F7968C007E7F74 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031847524F7968C007E7F74 /* zip.h */; };
+		003184A324F7968C007E7F74 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031847624F7968C007E7F74 /* unzip.h */; };
+		003184A424F7968C007E7F74 /* ioapi_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 0031847724F7968C007E7F74 /* ioapi_mem.c */; };
+		003184A524F7968C007E7F74 /* minishared.c in Sources */ = {isa = PBXBuildFile; fileRef = 0031847824F7968C007E7F74 /* minishared.c */; };
+		003184A624F7968C007E7F74 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031847924F7968C007E7F74 /* ioapi.h */; };
+		003184A724F7968C007E7F74 /* ioapi_buf.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031847A24F7968C007E7F74 /* ioapi_buf.h */; };
+		003184A824F7968C007E7F74 /* prng.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031847C24F7968C007E7F74 /* prng.h */; };
+		003184A924F7968C007E7F74 /* aes_ni.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031847D24F7968C007E7F74 /* aes_ni.h */; };
+		003184AA24F7968C007E7F74 /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = 0031847E24F7968C007E7F74 /* aeskey.c */; };
+		003184AB24F7968C007E7F74 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 0031847F24F7968C007E7F74 /* hmac.c */; };
+		003184AC24F7968C007E7F74 /* aestab.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031848024F7968C007E7F74 /* aestab.h */; };
+		003184AD24F7968C007E7F74 /* pwd2key.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031848124F7968C007E7F74 /* pwd2key.h */; };
+		003184AE24F7968C007E7F74 /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 0031848224F7968C007E7F74 /* aescrypt.c */; };
+		003184AF24F7968C007E7F74 /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 0031848324F7968C007E7F74 /* fileenc.c */; };
+		003184B024F7968C007E7F74 /* aesopt.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031848424F7968C007E7F74 /* aesopt.h */; };
+		003184B124F7968C007E7F74 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 0031848524F7968C007E7F74 /* sha1.c */; };
+		003184B224F7968C007E7F74 /* brg_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031848624F7968C007E7F74 /* brg_types.h */; };
+		003184B324F7968C007E7F74 /* hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031848724F7968C007E7F74 /* hmac.h */; };
+		003184B424F7968C007E7F74 /* aes_ni.c in Sources */ = {isa = PBXBuildFile; fileRef = 0031848824F7968C007E7F74 /* aes_ni.c */; };
+		003184B524F7968C007E7F74 /* brg_endian.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031848924F7968C007E7F74 /* brg_endian.h */; };
+		003184B624F7968C007E7F74 /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = 0031848A24F7968C007E7F74 /* prng.c */; };
+		003184B724F7968C007E7F74 /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031848B24F7968C007E7F74 /* aes.h */; };
+		003184B824F7968C007E7F74 /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = 0031848C24F7968C007E7F74 /* pwd2key.c */; };
+		003184B924F7968C007E7F74 /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = 0031848D24F7968C007E7F74 /* aestab.c */; };
+		003184BA24F7968C007E7F74 /* sha1.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031848E24F7968C007E7F74 /* sha1.h */; };
+		003184BB24F7968C007E7F74 /* fileenc.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031848F24F7968C007E7F74 /* fileenc.h */; };
+		003184BC24F7968C007E7F74 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031849024F7968C007E7F74 /* SSZipArchive.h */; };
+		003184BD24F7968C007E7F74 /* SSZipCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031849124F7968C007E7F74 /* SSZipCommon.h */; };
+		003184BE24F7968C007E7F74 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031849224F7968C007E7F74 /* SSZipArchive.m */; };
+		003184C324F7A9A4007E7F74 /* PLVVodConfigModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 003184C124F7A9A4007E7F74 /* PLVVodConfigModule.h */; };
+		003184C424F7A9A4007E7F74 /* PLVVodConfigModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 003184C224F7A9A4007E7F74 /* PLVVodConfigModule.m */; };
+		00428305250620BD00EBC8E9 /* PLVVodInfoModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 00428303250620BD00EBC8E9 /* PLVVodInfoModule.h */; };
+		00428306250620BD00EBC8E9 /* PLVVodInfoModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 00428304250620BD00EBC8E9 /* PLVVodInfoModule.m */; };
+		00428309250623D000EBC8E9 /* PLVVodDownloadModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 00428307250623D000EBC8E9 /* PLVVodDownloadModule.h */; };
+		0042830A250623D000EBC8E9 /* PLVVodDownloadModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 00428308250623D000EBC8E9 /* PLVVodDownloadModule.m */; };
+		006C15E424FDFA9D00A93571 /* PLVVodPlayerComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 006C15E224FDFA9D00A93571 /* PLVVodPlayerComponent.h */; };
+		006C15E524FDFA9D00A93571 /* PLVVodPlayerComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 006C15E324FDFA9D00A93571 /* PLVVodPlayerComponent.m */; };
+		006C15E924FE4AE800A93571 /* PLVVodUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 006C15E724FE4AE800A93571 /* PLVVodUtils.h */; };
+		006C15EA24FE4AE800A93571 /* PLVVodUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 006C15E824FE4AE800A93571 /* PLVVodUtils.m */; };
+		0075EF0024F6630F0036F902 /* PLVVodPluginProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0075EEF924F6630F0036F902 /* PLVVodPluginProxy.h */; };
+		0075EF0324F6630F0036F902 /* PLVVodPluginProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0075EEFC24F6630F0036F902 /* PLVVodPluginProxy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0031844624F793EE007E7F74 /* PLVVodSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PLVVodSDK.framework; path = ../Frameworks/PLVVodSDK.framework; sourceTree = "<group>"; };
+		0031844824F793FD007E7F74 /* WCDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WCDB.framework; path = ../Frameworks/WCDB.framework; sourceTree = "<group>"; };
+		0031844A24F7940A007E7F74 /* sqlcipher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = sqlcipher.framework; path = ../Frameworks/sqlcipher.framework; sourceTree = "<group>"; };
+		0031845B24F7964D007E7F74 /* AlicloudHttpDNS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlicloudHttpDNS.framework; path = ../Frameworks/AlicloudHttpDNS.framework; sourceTree = "<group>"; };
+		0031845D24F7965B007E7F74 /* AlicloudUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlicloudUtils.framework; path = ../Frameworks/AlicloudUtils.framework; sourceTree = "<group>"; };
+		0031845E24F7965B007E7F74 /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UTDID.framework; path = ../Frameworks/UTDID.framework; sourceTree = "<group>"; };
+		0031846324F7968C007E7F74 /* PLVTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLVTimer.m; sourceTree = "<group>"; };
+		0031846424F7968C007E7F74 /* PLVTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLVTimer.h; sourceTree = "<group>"; };
+		0031846624F7968C007E7F74 /* PLVMarquee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLVMarquee.m; sourceTree = "<group>"; };
+		0031846724F7968C007E7F74 /* PLVMarqueeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLVMarqueeViewModel.h; sourceTree = "<group>"; };
+		0031846824F7968C007E7F74 /* PLVMarquee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLVMarquee.h; sourceTree = "<group>"; };
+		0031846924F7968C007E7F74 /* PLVMarqueeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLVMarqueeViewModel.m; sourceTree = "<group>"; };
+		0031846B24F7968C007E7F74 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		0031846D24F7968C007E7F74 /* crypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crypt.c; sourceTree = "<group>"; };
+		0031846E24F7968C007E7F74 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		0031846F24F7968C007E7F74 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		0031847024F7968C007E7F74 /* minishared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minishared.h; sourceTree = "<group>"; };
+		0031847124F7968C007E7F74 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		0031847224F7968C007E7F74 /* ioapi_mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi_mem.h; sourceTree = "<group>"; };
+		0031847324F7968C007E7F74 /* ioapi_buf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi_buf.c; sourceTree = "<group>"; };
+		0031847424F7968C007E7F74 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		0031847524F7968C007E7F74 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		0031847624F7968C007E7F74 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		0031847724F7968C007E7F74 /* ioapi_mem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi_mem.c; sourceTree = "<group>"; };
+		0031847824F7968C007E7F74 /* minishared.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = minishared.c; sourceTree = "<group>"; };
+		0031847924F7968C007E7F74 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		0031847A24F7968C007E7F74 /* ioapi_buf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi_buf.h; sourceTree = "<group>"; };
+		0031847C24F7968C007E7F74 /* prng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prng.h; sourceTree = "<group>"; };
+		0031847D24F7968C007E7F74 /* aes_ni.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes_ni.h; sourceTree = "<group>"; };
+		0031847E24F7968C007E7F74 /* aeskey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aeskey.c; sourceTree = "<group>"; };
+		0031847F24F7968C007E7F74 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		0031848024F7968C007E7F74 /* aestab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aestab.h; sourceTree = "<group>"; };
+		0031848124F7968C007E7F74 /* pwd2key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pwd2key.h; sourceTree = "<group>"; };
+		0031848224F7968C007E7F74 /* aescrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aescrypt.c; sourceTree = "<group>"; };
+		0031848324F7968C007E7F74 /* fileenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fileenc.c; sourceTree = "<group>"; };
+		0031848424F7968C007E7F74 /* aesopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aesopt.h; sourceTree = "<group>"; };
+		0031848524F7968C007E7F74 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		0031848624F7968C007E7F74 /* brg_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_types.h; sourceTree = "<group>"; };
+		0031848724F7968C007E7F74 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		0031848824F7968C007E7F74 /* aes_ni.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aes_ni.c; sourceTree = "<group>"; };
+		0031848924F7968C007E7F74 /* brg_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_endian.h; sourceTree = "<group>"; };
+		0031848A24F7968C007E7F74 /* prng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prng.c; sourceTree = "<group>"; };
+		0031848B24F7968C007E7F74 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		0031848C24F7968C007E7F74 /* pwd2key.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pwd2key.c; sourceTree = "<group>"; };
+		0031848D24F7968C007E7F74 /* aestab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aestab.c; sourceTree = "<group>"; };
+		0031848E24F7968C007E7F74 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		0031848F24F7968C007E7F74 /* fileenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileenc.h; sourceTree = "<group>"; };
+		0031849024F7968C007E7F74 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		0031849124F7968C007E7F74 /* SSZipCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipCommon.h; sourceTree = "<group>"; };
+		0031849224F7968C007E7F74 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		003184C124F7A9A4007E7F74 /* PLVVodConfigModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLVVodConfigModule.h; sourceTree = "<group>"; };
+		003184C224F7A9A4007E7F74 /* PLVVodConfigModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLVVodConfigModule.m; sourceTree = "<group>"; };
+		00428303250620BD00EBC8E9 /* PLVVodInfoModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLVVodInfoModule.h; sourceTree = "<group>"; };
+		00428304250620BD00EBC8E9 /* PLVVodInfoModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLVVodInfoModule.m; sourceTree = "<group>"; };
+		00428307250623D000EBC8E9 /* PLVVodDownloadModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLVVodDownloadModule.h; sourceTree = "<group>"; };
+		00428308250623D000EBC8E9 /* PLVVodDownloadModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLVVodDownloadModule.m; sourceTree = "<group>"; };
+		006C15E224FDFA9D00A93571 /* PLVVodPlayerComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLVVodPlayerComponent.h; sourceTree = "<group>"; };
+		006C15E324FDFA9D00A93571 /* PLVVodPlayerComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLVVodPlayerComponent.m; sourceTree = "<group>"; };
+		006C15E724FE4AE800A93571 /* PLVVodUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLVVodUtils.h; sourceTree = "<group>"; };
+		006C15E824FE4AE800A93571 /* PLVVodUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLVVodUtils.m; sourceTree = "<group>"; };
+		0075EEF924F6630F0036F902 /* PLVVodPluginProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLVVodPluginProxy.h; sourceTree = "<group>"; };
+		0075EEFC24F6630F0036F902 /* PLVVodPluginProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLVVodPluginProxy.m; sourceTree = "<group>"; };
+		0075EEFD24F6630F0036F902 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9759EDBE245048A40076CC51 /* PLVVodUniPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PLVVodUniPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97A515C324518A6C00BC028D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9759EDBB245048A40076CC51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0031846124F7968C007E7F74 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				0031846224F7968C007E7F74 /* PLVTimer */,
+				0031846524F7968C007E7F74 /* PLVMarquee */,
+				0031846A24F7968C007E7F74 /* SSZipArchive */,
+			);
+			name = Library;
+			path = ../Library;
+			sourceTree = "<group>";
+		};
+		0031846224F7968C007E7F74 /* PLVTimer */ = {
+			isa = PBXGroup;
+			children = (
+				0031846324F7968C007E7F74 /* PLVTimer.m */,
+				0031846424F7968C007E7F74 /* PLVTimer.h */,
+			);
+			path = PLVTimer;
+			sourceTree = "<group>";
+		};
+		0031846524F7968C007E7F74 /* PLVMarquee */ = {
+			isa = PBXGroup;
+			children = (
+				0031846624F7968C007E7F74 /* PLVMarquee.m */,
+				0031846724F7968C007E7F74 /* PLVMarqueeViewModel.h */,
+				0031846824F7968C007E7F74 /* PLVMarquee.h */,
+				0031846924F7968C007E7F74 /* PLVMarqueeViewModel.m */,
+			);
+			path = PLVMarquee;
+			sourceTree = "<group>";
+		};
+		0031846A24F7968C007E7F74 /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				0031846B24F7968C007E7F74 /* ZipArchive.h */,
+				0031846C24F7968C007E7F74 /* minizip */,
+				0031849024F7968C007E7F74 /* SSZipArchive.h */,
+				0031849124F7968C007E7F74 /* SSZipCommon.h */,
+				0031849224F7968C007E7F74 /* SSZipArchive.m */,
+			);
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		0031846C24F7968C007E7F74 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				0031846D24F7968C007E7F74 /* crypt.c */,
+				0031846E24F7968C007E7F74 /* unzip.c */,
+				0031846F24F7968C007E7F74 /* zip.c */,
+				0031847024F7968C007E7F74 /* minishared.h */,
+				0031847124F7968C007E7F74 /* ioapi.c */,
+				0031847224F7968C007E7F74 /* ioapi_mem.h */,
+				0031847324F7968C007E7F74 /* ioapi_buf.c */,
+				0031847424F7968C007E7F74 /* crypt.h */,
+				0031847524F7968C007E7F74 /* zip.h */,
+				0031847624F7968C007E7F74 /* unzip.h */,
+				0031847724F7968C007E7F74 /* ioapi_mem.c */,
+				0031847824F7968C007E7F74 /* minishared.c */,
+				0031847924F7968C007E7F74 /* ioapi.h */,
+				0031847A24F7968C007E7F74 /* ioapi_buf.h */,
+				0031847B24F7968C007E7F74 /* aes */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		0031847B24F7968C007E7F74 /* aes */ = {
+			isa = PBXGroup;
+			children = (
+				0031847C24F7968C007E7F74 /* prng.h */,
+				0031847D24F7968C007E7F74 /* aes_ni.h */,
+				0031847E24F7968C007E7F74 /* aeskey.c */,
+				0031847F24F7968C007E7F74 /* hmac.c */,
+				0031848024F7968C007E7F74 /* aestab.h */,
+				0031848124F7968C007E7F74 /* pwd2key.h */,
+				0031848224F7968C007E7F74 /* aescrypt.c */,
+				0031848324F7968C007E7F74 /* fileenc.c */,
+				0031848424F7968C007E7F74 /* aesopt.h */,
+				0031848524F7968C007E7F74 /* sha1.c */,
+				0031848624F7968C007E7F74 /* brg_types.h */,
+				0031848724F7968C007E7F74 /* hmac.h */,
+				0031848824F7968C007E7F74 /* aes_ni.c */,
+				0031848924F7968C007E7F74 /* brg_endian.h */,
+				0031848A24F7968C007E7F74 /* prng.c */,
+				0031848B24F7968C007E7F74 /* aes.h */,
+				0031848C24F7968C007E7F74 /* pwd2key.c */,
+				0031848D24F7968C007E7F74 /* aestab.c */,
+				0031848E24F7968C007E7F74 /* sha1.h */,
+				0031848F24F7968C007E7F74 /* fileenc.h */,
+			);
+			path = aes;
+			sourceTree = "<group>";
+		};
+		0075EEF724F6630F0036F902 /* PLVVodUniPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				003184C124F7A9A4007E7F74 /* PLVVodConfigModule.h */,
+				003184C224F7A9A4007E7F74 /* PLVVodConfigModule.m */,
+				00428303250620BD00EBC8E9 /* PLVVodInfoModule.h */,
+				00428304250620BD00EBC8E9 /* PLVVodInfoModule.m */,
+				00428307250623D000EBC8E9 /* PLVVodDownloadModule.h */,
+				00428308250623D000EBC8E9 /* PLVVodDownloadModule.m */,
+				006C15E224FDFA9D00A93571 /* PLVVodPlayerComponent.h */,
+				006C15E324FDFA9D00A93571 /* PLVVodPlayerComponent.m */,
+				0075EEF924F6630F0036F902 /* PLVVodPluginProxy.h */,
+				0075EEFC24F6630F0036F902 /* PLVVodPluginProxy.m */,
+				0075EEFD24F6630F0036F902 /* Info.plist */,
+				006C15E724FE4AE800A93571 /* PLVVodUtils.h */,
+				006C15E824FE4AE800A93571 /* PLVVodUtils.m */,
+			);
+			path = PLVVodUniPlugin;
+			sourceTree = "<group>";
+		};
+		9759EDB4245048A40076CC51 = {
+			isa = PBXGroup;
+			children = (
+				0031846124F7968C007E7F74 /* Library */,
+				0075EEF724F6630F0036F902 /* PLVVodUniPlugin */,
+				9759EDBF245048A40076CC51 /* Products */,
+				97A515C224518A6C00BC028D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9759EDBF245048A40076CC51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9759EDBE245048A40076CC51 /* PLVVodUniPlugin.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97A515C224518A6C00BC028D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0031845D24F7965B007E7F74 /* AlicloudUtils.framework */,
+				0031845E24F7965B007E7F74 /* UTDID.framework */,
+				0031845B24F7964D007E7F74 /* AlicloudHttpDNS.framework */,
+				0031844A24F7940A007E7F74 /* sqlcipher.framework */,
+				0031844824F793FD007E7F74 /* WCDB.framework */,
+				0031844624F793EE007E7F74 /* PLVVodSDK.framework */,
+				97A515C324518A6C00BC028D /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9759EDB9245048A40076CC51 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				003184B224F7968C007E7F74 /* brg_types.h in Headers */,
+				003184BA24F7968C007E7F74 /* sha1.h in Headers */,
+				003184A224F7968C007E7F74 /* zip.h in Headers */,
+				006C15E424FDFA9D00A93571 /* PLVVodPlayerComponent.h in Headers */,
+				00428309250623D000EBC8E9 /* PLVVodDownloadModule.h in Headers */,
+				003184BC24F7968C007E7F74 /* SSZipArchive.h in Headers */,
+				003184AC24F7968C007E7F74 /* aestab.h in Headers */,
+				0031849924F7968C007E7F74 /* ZipArchive.h in Headers */,
+				003184B324F7968C007E7F74 /* hmac.h in Headers */,
+				003184A324F7968C007E7F74 /* unzip.h in Headers */,
+				003184C324F7A9A4007E7F74 /* PLVVodConfigModule.h in Headers */,
+				0031849624F7968C007E7F74 /* PLVMarqueeViewModel.h in Headers */,
+				0031849F24F7968C007E7F74 /* ioapi_mem.h in Headers */,
+				003184BD24F7968C007E7F74 /* SSZipCommon.h in Headers */,
+				003184AD24F7968C007E7F74 /* pwd2key.h in Headers */,
+				006C15E924FE4AE800A93571 /* PLVVodUtils.h in Headers */,
+				0075EF0024F6630F0036F902 /* PLVVodPluginProxy.h in Headers */,
+				0031849724F7968C007E7F74 /* PLVMarquee.h in Headers */,
+				003184A624F7968C007E7F74 /* ioapi.h in Headers */,
+				003184A824F7968C007E7F74 /* prng.h in Headers */,
+				003184B524F7968C007E7F74 /* brg_endian.h in Headers */,
+				003184B024F7968C007E7F74 /* aesopt.h in Headers */,
+				0031849D24F7968C007E7F74 /* minishared.h in Headers */,
+				00428305250620BD00EBC8E9 /* PLVVodInfoModule.h in Headers */,
+				0031849424F7968C007E7F74 /* PLVTimer.h in Headers */,
+				003184A924F7968C007E7F74 /* aes_ni.h in Headers */,
+				003184A124F7968C007E7F74 /* crypt.h in Headers */,
+				003184B724F7968C007E7F74 /* aes.h in Headers */,
+				003184BB24F7968C007E7F74 /* fileenc.h in Headers */,
+				003184A724F7968C007E7F74 /* ioapi_buf.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9759EDBD245048A40076CC51 /* PLVVodUniPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9759EDC6245048A40076CC51 /* Build configuration list for PBXNativeTarget "PLVVodUniPlugin" */;
+			buildPhases = (
+				9759EDB9245048A40076CC51 /* Headers */,
+				9759EDBA245048A40076CC51 /* Sources */,
+				9759EDBB245048A40076CC51 /* Frameworks */,
+				9759EDBC245048A40076CC51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PLVVodUniPlugin;
+			productName = DCTestUniPlugin;
+			productReference = 9759EDBE245048A40076CC51 /* PLVVodUniPlugin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9759EDB5245048A40076CC51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = DCloud;
+				TargetAttributes = {
+					9759EDBD245048A40076CC51 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 9759EDB8245048A40076CC51 /* Build configuration list for PBXProject "PLVVodUniPlugin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9759EDB4245048A40076CC51;
+			productRefGroup = 9759EDBF245048A40076CC51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9759EDBD245048A40076CC51 /* PLVVodUniPlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9759EDBC245048A40076CC51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9759EDBA245048A40076CC51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				003184AF24F7968C007E7F74 /* fileenc.c in Sources */,
+				003184AB24F7968C007E7F74 /* hmac.c in Sources */,
+				003184A424F7968C007E7F74 /* ioapi_mem.c in Sources */,
+				003184A024F7968C007E7F74 /* ioapi_buf.c in Sources */,
+				0031849324F7968C007E7F74 /* PLVTimer.m in Sources */,
+				003184A524F7968C007E7F74 /* minishared.c in Sources */,
+				003184C424F7A9A4007E7F74 /* PLVVodConfigModule.m in Sources */,
+				0075EF0324F6630F0036F902 /* PLVVodPluginProxy.m in Sources */,
+				006C15E524FDFA9D00A93571 /* PLVVodPlayerComponent.m in Sources */,
+				003184AE24F7968C007E7F74 /* aescrypt.c in Sources */,
+				0031849524F7968C007E7F74 /* PLVMarquee.m in Sources */,
+				003184B424F7968C007E7F74 /* aes_ni.c in Sources */,
+				003184B624F7968C007E7F74 /* prng.c in Sources */,
+				003184B924F7968C007E7F74 /* aestab.c in Sources */,
+				006C15EA24FE4AE800A93571 /* PLVVodUtils.m in Sources */,
+				0031849C24F7968C007E7F74 /* zip.c in Sources */,
+				003184AA24F7968C007E7F74 /* aeskey.c in Sources */,
+				0031849E24F7968C007E7F74 /* ioapi.c in Sources */,
+				003184B124F7968C007E7F74 /* sha1.c in Sources */,
+				0031849A24F7968C007E7F74 /* crypt.c in Sources */,
+				0031849824F7968C007E7F74 /* PLVMarqueeViewModel.m in Sources */,
+				00428306250620BD00EBC8E9 /* PLVVodInfoModule.m in Sources */,
+				0031849B24F7968C007E7F74 /* unzip.c in Sources */,
+				003184BE24F7968C007E7F74 /* SSZipArchive.m in Sources */,
+				0042830A250623D000EBC8E9 /* PLVVodDownloadModule.m in Sources */,
+				003184B824F7968C007E7F74 /* pwd2key.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9759EDC4245048A40076CC51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9759EDC5245048A40076CC51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9759EDC7245048A40076CC51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Frameworks\"";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../SDK/inc\"/**";
+				INFOPLIST_FILE = PLVVodUniPlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = io.dcloud.DCTestUniPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9759EDC8245048A40076CC51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Frameworks\"";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../SDK/inc\"/**";
+				INFOPLIST_FILE = PLVVodUniPlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = io.dcloud.DCTestUniPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9759EDB8245048A40076CC51 /* Build configuration list for PBXProject "PLVVodUniPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9759EDC4245048A40076CC51 /* Debug */,
+				9759EDC5245048A40076CC51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9759EDC6245048A40076CC51 /* Build configuration list for PBXNativeTarget "PLVVodUniPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9759EDC7245048A40076CC51 /* Debug */,
+				9759EDC8245048A40076CC51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9759EDB5245048A40076CC51 /* Project object */;
+}
