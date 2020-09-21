@@ -1,0 +1,6 @@
+framework module PLVVodSDK {
+  umbrella header "PLVVodSDK.h"
+
+  export *
+  module * { export * }
+}
