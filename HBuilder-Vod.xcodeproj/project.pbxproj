@@ -30,20 +30,21 @@
 		005205DC24F643180023AE9C /* bds_easr_gramm.dat in Resources */ = {isa = PBXBuildFile; fileRef = 005205D424F643180023AE9C /* bds_easr_gramm.dat */; };
 		005205DD24F643180023AE9C /* bds_easr_wakeup_words.dat in Resources */ = {isa = PBXBuildFile; fileRef = 005205D524F643180023AE9C /* bds_easr_wakeup_words.dat */; };
 		005205DE24F643180023AE9C /* bds_easr_dnn_wakeup_model.dat in Resources */ = {isa = PBXBuildFile; fileRef = 005205D624F643180023AE9C /* bds_easr_dnn_wakeup_model.dat */; };
-		0052062724F645100023AE9C /* weexUniJs.js in Resources */ = {isa = PBXBuildFile; fileRef = 0052062324F645100023AE9C /* weexUniJs.js */; };
-		0052062824F645100023AE9C /* uni-jsframework.js in Resources */ = {isa = PBXBuildFile; fileRef = 0052062424F645100023AE9C /* uni-jsframework.js */; };
-		0052062924F645100023AE9C /* __uniappes6.js in Resources */ = {isa = PBXBuildFile; fileRef = 0052062524F645100023AE9C /* __uniappes6.js */; };
-		0052062A24F645100023AE9C /* weex-polyfill.js in Resources */ = {isa = PBXBuildFile; fileRef = 0052062624F645100023AE9C /* weex-polyfill.js */; };
-		0052063424F6454B0023AE9C /* qucsdkResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0052062B24F6454A0023AE9C /* qucsdkResources.bundle */; };
-		0052063524F6454B0023AE9C /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0052062C24F6454A0023AE9C /* SVProgressHUD.bundle */; };
-		0052063624F6454B0023AE9C /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0052062D24F6454A0023AE9C /* mapapi.bundle */; };
-		0052063724F6454B0023AE9C /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0052062E24F6454A0023AE9C /* AMap.bundle */; };
-		0052063824F6454B0023AE9C /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0052062F24F6454A0023AE9C /* AlipaySDK.bundle */; };
-		0052063A24F6454B0023AE9C /* PandoraApi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0052063124F6454A0023AE9C /* PandoraApi.bundle */; };
-		0052063B24F6454B0023AE9C /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0052063224F6454A0023AE9C /* TencentOpenApi_IOS_Bundle.bundle */; };
-		0052063C24F6454B0023AE9C /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0052063324F6454B0023AE9C /* TZImagePickerController.bundle */; };
 		0075EF0C24F6637F0036F902 /* PLVVodUniPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0075EF0B24F663540036F902 /* PLVVodUniPlugin.framework */; };
 		0075EF1124F66E940036F902 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0075EF1024F66E940036F902 /* Images.xcassets */; };
+		00812E9D25185D4100270B2A /* qucsdkResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9025185D4000270B2A /* qucsdkResources.bundle */; };
+		00812E9E25185D4100270B2A /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9125185D4000270B2A /* mapapi.bundle */; };
+		00812E9F25185D4100270B2A /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9225185D4000270B2A /* WeiboSDK.bundle */; };
+		00812EA025185D4100270B2A /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9325185D4000270B2A /* TencentOpenApi_IOS_Bundle.bundle */; };
+		00812EA125185D4100270B2A /* weexUniJs.js in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9425185D4000270B2A /* weexUniJs.js */; };
+		00812EA225185D4100270B2A /* __uniappes6.js in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9525185D4000270B2A /* __uniappes6.js */; };
+		00812EA325185D4100270B2A /* PandoraApi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9625185D4000270B2A /* PandoraApi.bundle */; };
+		00812EA425185D4100270B2A /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9725185D4000270B2A /* TZImagePickerController.bundle */; };
+		00812EA525185D4100270B2A /* uni-jsframework.js in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9825185D4100270B2A /* uni-jsframework.js */; };
+		00812EA625185D4100270B2A /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9925185D4100270B2A /* SVProgressHUD.bundle */; };
+		00812EA725185D4100270B2A /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9A25185D4100270B2A /* AlipaySDK.bundle */; };
+		00812EA825185D4100270B2A /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9B25185D4100270B2A /* AMap.bundle */; };
+		00812EA925185D4100270B2A /* weex-polyfill.js in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9C25185D4100270B2A /* weex-polyfill.js */; };
 		009FB82725159FDE00607CF0 /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0031844E24F79478007E7F74 /* UTDID.framework */; };
 		009FB82C2515A02C00607CF0 /* AlicloudUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0031844C24F79478007E7F74 /* AlicloudUtils.framework */; };
 		24A7515F1D9CCCC600C8B0F9 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A7515E1D9CCCC600C8B0F9 /* QuickLook.framework */; };
@@ -244,19 +245,6 @@
 		005205D424F643180023AE9C /* bds_easr_gramm.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bds_easr_gramm.dat; sourceTree = "<group>"; };
 		005205D524F643180023AE9C /* bds_easr_wakeup_words.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = bds_easr_wakeup_words.dat; sourceTree = "<group>"; };
 		005205D624F643180023AE9C /* bds_easr_dnn_wakeup_model.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = bds_easr_dnn_wakeup_model.dat; sourceTree = "<group>"; };
-		0052062324F645100023AE9C /* weexUniJs.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = weexUniJs.js; path = SDK/Bundles/weexUniJs.js; sourceTree = SOURCE_ROOT; };
-		0052062424F645100023AE9C /* uni-jsframework.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "uni-jsframework.js"; path = "SDK/Bundles/uni-jsframework.js"; sourceTree = SOURCE_ROOT; };
-		0052062524F645100023AE9C /* __uniappes6.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = __uniappes6.js; path = SDK/Bundles/__uniappes6.js; sourceTree = SOURCE_ROOT; };
-		0052062624F645100023AE9C /* weex-polyfill.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "weex-polyfill.js"; path = "SDK/Bundles/weex-polyfill.js"; sourceTree = SOURCE_ROOT; };
-		0052062B24F6454A0023AE9C /* qucsdkResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = qucsdkResources.bundle; path = SDK/Bundles/qucsdkResources.bundle; sourceTree = SOURCE_ROOT; };
-		0052062C24F6454A0023AE9C /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SDK/Bundles/SVProgressHUD.bundle; sourceTree = SOURCE_ROOT; };
-		0052062D24F6454A0023AE9C /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = SDK/Bundles/mapapi.bundle; sourceTree = SOURCE_ROOT; };
-		0052062E24F6454A0023AE9C /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = SDK/Bundles/AMap.bundle; sourceTree = SOURCE_ROOT; };
-		0052062F24F6454A0023AE9C /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AlipaySDK.bundle; path = SDK/Bundles/AlipaySDK.bundle; sourceTree = SOURCE_ROOT; };
-		0052063024F6454A0023AE9C /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = WeiboSDK.bundle; path = SDK/Bundles/WeiboSDK.bundle; sourceTree = SOURCE_ROOT; };
-		0052063124F6454A0023AE9C /* PandoraApi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PandoraApi.bundle; path = SDK/Bundles/PandoraApi.bundle; sourceTree = SOURCE_ROOT; };
-		0052063224F6454A0023AE9C /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TencentOpenApi_IOS_Bundle.bundle; path = SDK/Bundles/TencentOpenApi_IOS_Bundle.bundle; sourceTree = SOURCE_ROOT; };
-		0052063324F6454B0023AE9C /* TZImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TZImagePickerController.bundle; path = SDK/Bundles/TZImagePickerController.bundle; sourceTree = SOURCE_ROOT; };
 		0052063F24F64DF90023AE9C /* PDRCoreAppWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDRCoreAppWindow.h; sourceTree = "<group>"; };
 		0052064024F64DF90023AE9C /* PDRNView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDRNView.h; sourceTree = "<group>"; };
 		0052064124F64DF90023AE9C /* PDRCommonString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDRCommonString.h; sourceTree = "<group>"; };
@@ -448,6 +436,19 @@
 		0052070524F64DFA0023AE9C /* PDRCoreApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDRCoreApp.h; sourceTree = "<group>"; };
 		0075EF0624F663540036F902 /* PLVVodUniPlugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PLVVodUniPlugin.xcodeproj; path = PLVVodUniPlugin/PLVVodUniPlugin.xcodeproj; sourceTree = "<group>"; };
 		0075EF1024F66E940036F902 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		00812E9025185D4000270B2A /* qucsdkResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = qucsdkResources.bundle; path = SDK/Bundles/qucsdkResources.bundle; sourceTree = SOURCE_ROOT; };
+		00812E9125185D4000270B2A /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = SDK/Bundles/mapapi.bundle; sourceTree = SOURCE_ROOT; };
+		00812E9225185D4000270B2A /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = WeiboSDK.bundle; path = SDK/Bundles/WeiboSDK.bundle; sourceTree = SOURCE_ROOT; };
+		00812E9325185D4000270B2A /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TencentOpenApi_IOS_Bundle.bundle; path = SDK/Bundles/TencentOpenApi_IOS_Bundle.bundle; sourceTree = SOURCE_ROOT; };
+		00812E9425185D4000270B2A /* weexUniJs.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = weexUniJs.js; path = SDK/Bundles/weexUniJs.js; sourceTree = SOURCE_ROOT; };
+		00812E9525185D4000270B2A /* __uniappes6.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = __uniappes6.js; path = SDK/Bundles/__uniappes6.js; sourceTree = SOURCE_ROOT; };
+		00812E9625185D4000270B2A /* PandoraApi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PandoraApi.bundle; path = SDK/Bundles/PandoraApi.bundle; sourceTree = SOURCE_ROOT; };
+		00812E9725185D4000270B2A /* TZImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TZImagePickerController.bundle; path = SDK/Bundles/TZImagePickerController.bundle; sourceTree = SOURCE_ROOT; };
+		00812E9825185D4100270B2A /* uni-jsframework.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "uni-jsframework.js"; path = "SDK/Bundles/uni-jsframework.js"; sourceTree = SOURCE_ROOT; };
+		00812E9925185D4100270B2A /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SDK/Bundles/SVProgressHUD.bundle; sourceTree = SOURCE_ROOT; };
+		00812E9A25185D4100270B2A /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AlipaySDK.bundle; path = SDK/Bundles/AlipaySDK.bundle; sourceTree = SOURCE_ROOT; };
+		00812E9B25185D4100270B2A /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = SDK/Bundles/AMap.bundle; sourceTree = SOURCE_ROOT; };
+		00812E9C25185D4100270B2A /* weex-polyfill.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "weex-polyfill.js"; path = "SDK/Bundles/weex-polyfill.js"; sourceTree = SOURCE_ROOT; };
 		240905021C200AEF0070786F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		242725CA1D2666ED00EBD79E /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		242725CC1D26686700EBD79E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -671,27 +672,6 @@
 			name = BDSClientEASRResources;
 			path = SDK/Bundles/BDSClientEASRResources;
 			sourceTree = SOURCE_ROOT;
-		};
-		005205E724F643CE0023AE9C /* Bundles */ = {
-			isa = PBXGroup;
-			children = (
-				0052062524F645100023AE9C /* __uniappes6.js */,
-				0052062424F645100023AE9C /* uni-jsframework.js */,
-				0052062624F645100023AE9C /* weex-polyfill.js */,
-				0052062324F645100023AE9C /* weexUniJs.js */,
-				0052062F24F6454A0023AE9C /* AlipaySDK.bundle */,
-				0052062E24F6454A0023AE9C /* AMap.bundle */,
-				0052062D24F6454A0023AE9C /* mapapi.bundle */,
-				0052063124F6454A0023AE9C /* PandoraApi.bundle */,
-				0052062B24F6454A0023AE9C /* qucsdkResources.bundle */,
-				0052062C24F6454A0023AE9C /* SVProgressHUD.bundle */,
-				0052063224F6454A0023AE9C /* TencentOpenApi_IOS_Bundle.bundle */,
-				0052063324F6454B0023AE9C /* TZImagePickerController.bundle */,
-				0052063024F6454A0023AE9C /* WeiboSDK.bundle */,
-			);
-			name = Bundles;
-			path = ../../SDK/Bundles;
-			sourceTree = "<group>";
 		};
 		0052063E24F64DF90023AE9C /* inc */ = {
 			isa = PBXGroup;
@@ -978,6 +958,26 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		00812E8F25185CA300270B2A /* Bundles */ = {
+			isa = PBXGroup;
+			children = (
+				00812E9525185D4000270B2A /* __uniappes6.js */,
+				00812E9A25185D4100270B2A /* AlipaySDK.bundle */,
+				00812E9B25185D4100270B2A /* AMap.bundle */,
+				00812E9125185D4000270B2A /* mapapi.bundle */,
+				00812E9625185D4000270B2A /* PandoraApi.bundle */,
+				00812E9025185D4000270B2A /* qucsdkResources.bundle */,
+				00812E9925185D4100270B2A /* SVProgressHUD.bundle */,
+				00812E9325185D4000270B2A /* TencentOpenApi_IOS_Bundle.bundle */,
+				00812E9725185D4000270B2A /* TZImagePickerController.bundle */,
+				00812E9825185D4100270B2A /* uni-jsframework.js */,
+				00812E9C25185D4100270B2A /* weex-polyfill.js */,
+				00812E9425185D4000270B2A /* weexUniJs.js */,
+				00812E9225185D4000270B2A /* WeiboSDK.bundle */,
+			);
+			path = Bundles;
+			sourceTree = "<group>";
+		};
 		8EED628F198A1D13000A4449 = {
 			isa = PBXGroup;
 			children = (
@@ -1261,10 +1261,10 @@
 		8EED62A2198A1D13000A4449 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				005205CE24F643180023AE9C /* BDSClientEASRResources */,
+				00812E8F25185CA300270B2A /* Bundles */,
 				0075EF1024F66E940036F902 /* Images.xcassets */,
 				2F0BA4DB215BA12300F67004 /* LaunchScreen.storyboard */,
-				005205CE24F643180023AE9C /* BDSClientEASRResources */,
-				005205E724F643CE0023AE9C /* Bundles */,
 				8EED62A3198A1D13000A4449 /* HBuilder-Vod-Info.plist */,
 				67B7CAA121DCE8180083E96A /* control.xml */,
 				8EED62A7198A1D13000A4449 /* main.m */,
@@ -1390,14 +1390,14 @@
 				67065F4E2243868400DC71CA /* Default-Portrait7-1194h@2x~ipad.png in Resources */,
 				005205DB24F643180023AE9C /* bds_easr_mfe_dnn.dat in Resources */,
 				67065F4C2243868400DC71CA /* Default-Landscape@2x~ipad.png in Resources */,
+				00812E9E25185D4100270B2A /* mapapi.bundle in Resources */,
 				67065F442243868400DC71CA /* Default-Portrait@2x~ipad.png in Resources */,
 				005205DE24F643180023AE9C /* bds_easr_dnn_wakeup_model.dat in Resources */,
-				0052063824F6454B0023AE9C /* AlipaySDK.bundle in Resources */,
 				67065F402243868400DC71CA /* Default-Portrait7@2x~ipad.png in Resources */,
+				00812EA525185D4100270B2A /* uni-jsframework.js in Resources */,
 				67065F512243868400DC71CA /* Default-Portrait7-1112h@2x~ipad.png in Resources */,
 				005205D924F643180023AE9C /* bds_easr_mfe_cmvn.dat in Resources */,
 				67065F3F2243868400DC71CA /* Default-736h@3x.png in Resources */,
-				0052063724F6454B0023AE9C /* AMap.bundle in Resources */,
 				67065F4B2243868400DC71CA /* Default@2x.png in Resources */,
 				67065F492243868400DC71CA /* Default-896h@3x.png in Resources */,
 				67065F552243868400DC71CA /* Default-Landscape-736h@3x.png in Resources */,
@@ -1406,39 +1406,40 @@
 				67065F3B2243868400DC71CA /* Default-Landscape-812h@3x.png in Resources */,
 				005205DD24F643180023AE9C /* bds_easr_wakeup_words.dat in Resources */,
 				67065F412243868400DC71CA /* Default-Landscape-667h@2x.png in Resources */,
+				00812EA625185D4100270B2A /* SVProgressHUD.bundle in Resources */,
 				67065F3D2243868400DC71CA /* Default-Portrait~ipad.png in Resources */,
-				0052063A24F6454B0023AE9C /* PandoraApi.bundle in Resources */,
+				00812EA125185D4100270B2A /* weexUniJs.js in Resources */,
+				00812E9F25185D4100270B2A /* WeiboSDK.bundle in Resources */,
 				67065F3A2243868400DC71CA /* Default-896h@2x.png in Resources */,
-				0052063B24F6454B0023AE9C /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				67065F3E2243868400DC71CA /* Default-667h@2x.png in Resources */,
 				67065F4A2243868400DC71CA /* Default.png in Resources */,
+				00812EA325185D4100270B2A /* PandoraApi.bundle in Resources */,
+				00812EA425185D4100270B2A /* TZImagePickerController.bundle in Resources */,
 				0075EF1124F66E940036F902 /* Images.xcassets in Resources */,
 				67065F452243868400DC71CA /* Default-Landscape~ipad.png in Resources */,
 				67065F432243868400DC71CA /* Default-Portrait7-1366h@2x~ipad.png in Resources */,
+				00812E9D25185D4100270B2A /* qucsdkResources.bundle in Resources */,
 				67065F472243868400DC71CA /* Default-Landscape7~ipad.png in Resources */,
 				67065F502243868400DC71CA /* Default-812h@3x.png in Resources */,
+				00812EA225185D4100270B2A /* __uniappes6.js in Resources */,
 				005205D724F643180023AE9C /* bds_license.dat in Resources */,
 				67065F532243868400DC71CA /* Default-Landscape-1112h@2x~ipad.png in Resources */,
-				0052063424F6454B0023AE9C /* qucsdkResources.bundle in Resources */,
 				67065F482243868400DC71CA /* Default-Landscape-1194h@2x~ipad.png in Resources */,
-				0052062A24F645100023AE9C /* weex-polyfill.js in Resources */,
 				67065F3C2243868400DC71CA /* Default-Landscape-896h@3x.png in Resources */,
-				0052063C24F6454B0023AE9C /* TZImagePickerController.bundle in Resources */,
+				00812EA025185D4100270B2A /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				67E9CDCF22968D2E0076E0FB /* Localizable.strings in Resources */,
-				0052063624F6454B0023AE9C /* mapapi.bundle in Resources */,
 				67B7CAA221DCE8180083E96A /* control.xml in Resources */,
+				00812EA725185D4100270B2A /* AlipaySDK.bundle in Resources */,
 				67065F422243868400DC71CA /* Default-Landscape-1366h@2x~ipad.png in Resources */,
-				0052062724F645100023AE9C /* weexUniJs.js in Resources */,
 				67065F522243868400DC71CA /* Default-Portrait7~ipad.png in Resources */,
-				0052062824F645100023AE9C /* uni-jsframework.js in Resources */,
 				005205DC24F643180023AE9C /* bds_easr_gramm.dat in Resources */,
 				005205DA24F643180023AE9C /* temp_license_2018-02-24.dat in Resources */,
+				00812EA825185D4100270B2A /* AMap.bundle in Resources */,
 				67065F462243868400DC71CA /* Default-568h@2x.png in Resources */,
-				0052062924F645100023AE9C /* __uniappes6.js in Resources */,
-				0052063524F6454B0023AE9C /* SVProgressHUD.bundle in Resources */,
 				005205D824F643180023AE9C /* bds_easr_basic_model.dat in Resources */,
 				8EED6590198A3DF7000A4449 /* Pandora in Resources */,
 				67065F542243868400DC71CA /* Default-Landscape-896h@2x.png in Resources */,
+				00812EA925185D4100270B2A /* weex-polyfill.js in Resources */,
 				67065F4F2243868400DC71CA /* Default-Landscape-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
