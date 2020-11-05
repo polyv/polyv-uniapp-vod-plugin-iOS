@@ -267,6 +267,39 @@ WX_EXPORT_METHOD(@selector(setURL:callback:))
     [self.videoPlayer setURL:url];
 }
 
+WX_EXPORT_METHOD(@selector(changeToPortrait))
+
+- (void)changeToPortrait {
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    BOOL isPortrait = UIInterfaceOrientationIsPortrait(orientation);
+    if (!isPortrait) {
+        [self rotateOrientation:UIInterfaceOrientationPortrait];
+    }
+}
+
+WX_EXPORT_METHOD(@selector(changeToLandscape))
+
+- (void)changeToLandscape {
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    BOOL isPortrait = UIInterfaceOrientationIsPortrait(orientation);
+    if (isPortrait) {
+        [self rotateOrientation:UIInterfaceOrientationLandscapeLeft];
+    }
+}
+
+/// 旋转设备到指定方向
+- (void)rotateOrientation:(UIInterfaceOrientation)orientation {
+    if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)]) {
+        SEL selector = NSSelectorFromString(@"setOrientation:");
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];
+        [invocation setSelector:selector];
+        [invocation setTarget:[UIDevice currentDevice]];
+        int val = (int)orientation;
+        [invocation setArgument:&val atIndex:2];
+        [invocation invoke];
+    }
+}
+
 WX_EXPORT_METHOD(@selector(start))
 
 - (void)start {
