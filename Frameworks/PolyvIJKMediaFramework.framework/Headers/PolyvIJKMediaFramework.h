@@ -29,16 +29,16 @@ FOUNDATION_EXPORT double PolyvIJKMediaFrameworkVersionNumber;
 //! Project version string for IJKMediaFramework.
 FOUNDATION_EXPORT const unsigned char PolyvIJKMediaFrameworkVersionString[];
 
-#import <PolyvIJKMediaFramework/IJKMediaPlayback.h>
-#import <PolyvIJKMediaFramework/IJKMPMoviePlayerController.h>
-#import <PolyvIJKMediaFramework/IJKFFOptions.h>
+#import <PolyvIJKMediaFramework/PLVIJKMediaPlayback.h>
+#import <PolyvIJKMediaFramework/PLVIJKMPMoviePlayerController.h>
+#import <PolyvIJKMediaFramework/PLVIJKFFOptions.h>
 #import <PolyvIJKMediaFramework/PLVIJKFFMoviePlayerController.h>
-#import <PolyvIJKMediaFramework/IJKAVMoviePlayerController.h>
-#import <PolyvIJKMediaFramework/IJKMediaModule.h>
-#import <PolyvIJKMediaFramework/IJKMediaPlayer.h>
-#import <PolyvIJKMediaFramework/IJKNotificationManager.h>
-#import <PolyvIJKMediaFramework/IJKKVOController.h>
-#import <PolyvIJKMediaFramework/IJKSDLGLViewProtocol.h>
+#import <PolyvIJKMediaFramework/PLVIJKAVMoviePlayerController.h>
+#import <PolyvIJKMediaFramework/PLVIJKMediaModule.h>
+#import <PolyvIJKMediaFramework/PLVIJKMediaPlayer.h>
+#import <PolyvIJKMediaFramework/PLVIJKNotificationManager.h>
+#import <PolyvIJKMediaFramework/PLVIJKKVOController.h>
+#import <PolyvIJKMediaFramework/PLVIJKSDLGLViewProtocol.h>
 
 // backward compatible for old names
 #define IJKMediaPlaybackIsPreparedToPlayDidChangeNotification IJKMPMediaPlaybackIsPreparedToPlayDidChangeNotification

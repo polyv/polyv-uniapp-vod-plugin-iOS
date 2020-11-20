@@ -166,8 +166,8 @@ typedef NS_ENUM(NSInteger, PLVVodFullScreenOrientation) {
 
 /// 播放速度
 @property (nonatomic, assign) double playbackRate;
-/// 是否切换码率时，记忆播放速度，默认 YES
-@property (nonatomic, assign) double rememberPlaybackRate;
+/// 是否在切换码率/切换音视频播放模式/切换播放线路时，记忆播放速度，默认 YES
+@property (nonatomic, assign) BOOL rememberPlaybackRate;
 
 /// 播放音量
 @property (nonatomic, assign) double playbackVolume;
@@ -226,7 +226,7 @@ typedef NS_ENUM(NSInteger, PLVVodFullScreenOrientation) {
 @property (nonatomic, assign) PLVVodFullScreenOrientation fullScreenOrientation;
 
 /// 当前是否全屏
-@property (nonatomic, assign, readonly) BOOL fullscreen;
+@property (nonatomic, assign) BOOL fullscreen;
 /// 全屏状态变化回调
 @property (nonatomic, copy) void (^didFullScreenSwitch)(BOOL fullScreen);
 
@@ -264,6 +264,13 @@ typedef NS_ENUM(NSInteger, PLVVodFullScreenOrientation) {
 /// 预加载视频最小帧数，缓存数据长度达到最小帧数，不再读取更多数据
 @property (nonatomic, assign) NSInteger minCacheFrame;
 
+/// 占位视图
+@property (nonatomic, strong) UIView *placeholderView;
+/// self.view 当前约束
+@property (nonatomic, strong) NSMutableArray<NSLayoutConstraint *> *constraints;
+/// 根控制器
+@property (nonatomic, weak) UIViewController *rootViewController;
+
 /// 返回当前播放视频的 pid
 - (NSString *)getPlayId;
 
@@ -296,9 +303,6 @@ typedef NS_ENUM(NSInteger, PLVVodFullScreenOrientation) {
 
 /// 当前时刻的截图
 - (UIImage *)snapshot;
-
-/// 旋转设备到指定方向
-+ (void)rotateOrientation:(UIInterfaceOrientation)orientation;
 
 /// 播放时间显示字符串，子类中重写该方法，可实现自定义播放器时间显示
 - (NSString *)timeDescription;
@@ -373,10 +377,13 @@ typedef NS_ENUM(NSInteger, PLVVodFullScreenOrientation) {
 
 - (BOOL)setCustomTeaser:(NSString *)teaserUrl teaserDuration:(NSInteger )teaserDuration;
 
-// 设置播放器是否处于全屏模式
-- (void)setPlayerFullScreen:(BOOL)full;
-
 /// 为播放器增加 logo，一个播放器只能添加一个 PLVVodPlayerLogo 对象
 - (void)addPlayerLogo:(PLVVodPlayerLogo *)logo;
+
+// 设置播放器是否处于全屏模式
+- (void)setPlayerFullScreen:(BOOL)full DEPRECATED_MSG_ATTRIBUTE("Please use [PLVVodSkinPlayerController playInFullscreen:] instead");
+
+/// 旋转设备到指定方向
++ (void)rotateOrientation:(UIInterfaceOrientation)orientation DEPRECATED_MSG_ATTRIBUTE("Please use [PLVVodUtils changeDeviceOrientation:] instead");
 
 @end

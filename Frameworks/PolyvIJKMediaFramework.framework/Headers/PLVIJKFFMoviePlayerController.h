@@ -21,10 +21,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-#import "IJKMediaPlayback.h"
-#import "IJKFFMonitor.h"
-#import "IJKFFOptions.h"
-#import "IJKSDLGLViewProtocol.h"
+#import "PLVIJKMediaPlayback.h"
+#import "PLVIJKFFMonitor.h"
+#import "PLVIJKFFOptions.h"
+#import "PLVIJKSDLGLViewProtocol.h"
 
 // media meta
 #define k_IJKM_KEY_FORMAT         @"format"
@@ -70,21 +70,22 @@ typedef enum IJKLogLevel {
     k_IJK_LOG_SILENT  = 8,
 } IJKLogLevel;
 
-@interface PLVIJKFFMoviePlayerController : NSObject <IJKMediaPlayback>
+__attribute__((visibility ("default")))
+@interface PLVIJKFFMoviePlayerController : NSObject <PLVIJKMediaPlayback>
 
 - (id)initWithContentURL:(NSURL *)aUrl
-             withOptions:(IJKFFOptions *)options;
+             withOptions:(PLVIJKFFOptions *)options;
 
 - (id)initWithContentURLString:(NSString *)aUrlString
-                   withOptions:(IJKFFOptions *)options;
+                   withOptions:(PLVIJKFFOptions *)options;
 
 - (id)initWithMoreContent:(NSURL *)aUrl
-             withOptions:(IJKFFOptions *)options
-              withGLView:(UIView<IJKSDLGLViewProtocol> *)glView;
+             withOptions:(PLVIJKFFOptions *)options
+              withGLView:(UIView<PLVIJKSDLGLViewProtocol> *)glView;
 
 - (id)initWithMoreContentString:(NSString *)aUrlString
-                 withOptions:(IJKFFOptions *)options
-                  withGLView:(UIView<IJKSDLGLViewProtocol> *)glView;
+                 withOptions:(PLVIJKFFOptions *)options
+                  withGLView:(UIView<PLVIJKSDLGLViewProtocol> *)glView;
 
 - (void)prepareToPlay;
 - (void)play;
@@ -149,7 +150,7 @@ typedef enum IJKLogLevel {
 - (void)didShutdown;
 
 #pragma mark KVO properties
-@property (nonatomic, readonly) IJKFFMonitor *monitor;
+@property (nonatomic, readonly) PLVIJKFFMonitor *monitor;
 
 @end
 
