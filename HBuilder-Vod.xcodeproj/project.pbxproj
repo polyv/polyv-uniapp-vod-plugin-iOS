@@ -35,7 +35,6 @@
 		00812E9D25185D4100270B2A /* qucsdkResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9025185D4000270B2A /* qucsdkResources.bundle */; };
 		00812E9E25185D4100270B2A /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9125185D4000270B2A /* mapapi.bundle */; };
 		00812E9F25185D4100270B2A /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9225185D4000270B2A /* WeiboSDK.bundle */; };
-		00812EA025185D4100270B2A /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9325185D4000270B2A /* TencentOpenApi_IOS_Bundle.bundle */; };
 		00812EA125185D4100270B2A /* weexUniJs.js in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9425185D4000270B2A /* weexUniJs.js */; };
 		00812EA225185D4100270B2A /* __uniappes6.js in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9525185D4000270B2A /* __uniappes6.js */; };
 		00812EA325185D4100270B2A /* PandoraApi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00812E9625185D4000270B2A /* PandoraApi.bundle */; };
@@ -82,6 +81,7 @@
 		6731F3A4232F5B7A007838BC /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6731F3A3232F5B7A007838BC /* libresolv.tbd */; };
 		67B7CAA221DCE8180083E96A /* control.xml in Resources */ = {isa = PBXBuildFile; fileRef = 67B7CAA121DCE8180083E96A /* control.xml */; };
 		67E9CDCF22968D2E0076E0FB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67E9CDCD22968D2E0076E0FB /* Localizable.strings */; };
+		8616F21825CA904E00FA9C42 /* liblibIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0052049524F640870023AE9C /* liblibIO.a */; };
 		8E163D021A8D208500308A8B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E163D011A8D208500308A8B /* AssetsLibrary.framework */; };
 		8EED629C198A1D13000A4449 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EED629B198A1D13000A4449 /* Foundation.framework */; };
 		8EED62A0198A1D13000A4449 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EED629F198A1D13000A4449 /* UIKit.framework */; };
@@ -625,6 +625,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8616F21825CA904E00FA9C42 /* liblibIO.a in Frameworks */,
 				009FB82C2515A02C00607CF0 /* AlicloudUtils.framework in Frameworks */,
 				002D8DF5251359A9007D6293 /* AlicloudHttpDNS.framework in Frameworks */,
 				0031845524F79479007E7F74 /* PLVVodSDK.framework in Frameworks */,
@@ -1426,7 +1427,6 @@
 				67065F532243868400DC71CA /* Default-Landscape-1112h@2x~ipad.png in Resources */,
 				67065F482243868400DC71CA /* Default-Landscape-1194h@2x~ipad.png in Resources */,
 				67065F3C2243868400DC71CA /* Default-Landscape-896h@3x.png in Resources */,
-				00812EA025185D4100270B2A /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				67E9CDCF22968D2E0076E0FB /* Localizable.strings in Resources */,
 				67B7CAA221DCE8180083E96A /* control.xml in Resources */,
 				00812EA725185D4100270B2A /* AlipaySDK.bundle in Resources */,
