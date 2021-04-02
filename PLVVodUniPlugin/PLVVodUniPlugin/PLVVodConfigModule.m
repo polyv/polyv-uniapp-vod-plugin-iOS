@@ -8,6 +8,7 @@
 
 #import "PLVVodConfigModule.h"
 #import "PLVVodUtils.h"
+#import "PLVVodConfig.h"
 #import <PLVVodSDK/PLVVodSDK.h>
 
 @implementation PLVVodConfigModule
@@ -106,6 +107,14 @@ WX_EXPORT_METHOD(@selector(setViewerInfo:))
     if (p5 && p5.length > 0) {
         viewerInfos.viewerExtraInfo3 = p5;
     }
+}
+
+WX_EXPORT_METHOD(@selector(openMediaCodec:))
+
+- (void)openMediaCodec:(NSDictionary *)options {
+    NSString *mediaCodec = [PLVVodUtils stringValueWithDictionary:options forKey:@"mediaCodec" defaultValue:nil];
+    BOOL isVideoToolBox = [mediaCodec boolValue];
+    [PLVVodConfig sharedConfig].isVideoToolBox = isVideoToolBox;
 }
 
 @end

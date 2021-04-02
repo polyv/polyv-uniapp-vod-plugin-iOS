@@ -10,6 +10,7 @@
 #import "WeexSDK.h"
 #import "WXConvert.h"
 #import "PLVVodUtils.h"
+#import "PLVVodConfig.h"
 #import "PLVMarquee.h"
 #import <PLVVodSDK/PLVVodSDK.h>
 #import <Photos/Photos.h>
@@ -107,6 +108,7 @@ typedef NS_ENUM(NSInteger, PLVUniPlayErrorType) {
     self.videoPlayer.seekType = _seekType;
     self.videoPlayer.videoCaptureProtect = _disableScreenCAP;
     self.videoPlayer.rememberLastPosition = _rememberLastPosition;
+    self.videoPlayer.isVideoToolBox = [PLVVodConfig sharedConfig].isVideoToolBox;
     
     __weak typeof(self) weakSelf = self;
     self.videoPlayer.playbackStateHandler = ^(PLVVodPlayerViewController *player) {

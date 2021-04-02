@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0012062B261552FF00473968 /* PLVVodConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 00120629261552FE00473968 /* PLVVodConfig.h */; };
+		0012062C261552FF00473968 /* PLVVodConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0012062A261552FE00473968 /* PLVVodConfig.m */; };
 		0031849324F7968C007E7F74 /* PLVTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031846324F7968C007E7F74 /* PLVTimer.m */; };
 		0031849424F7968C007E7F74 /* PLVTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0031846424F7968C007E7F74 /* PLVTimer.h */; };
 		0031849524F7968C007E7F74 /* PLVMarquee.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031846624F7968C007E7F74 /* PLVMarquee.m */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00120629261552FE00473968 /* PLVVodConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLVVodConfig.h; sourceTree = "<group>"; };
+		0012062A261552FE00473968 /* PLVVodConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLVVodConfig.m; sourceTree = "<group>"; };
 		0031844624F793EE007E7F74 /* PLVVodSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PLVVodSDK.framework; path = ../Frameworks/PLVVodSDK.framework; sourceTree = "<group>"; };
 		0031844824F793FD007E7F74 /* WCDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WCDB.framework; path = ../Frameworks/WCDB.framework; sourceTree = "<group>"; };
 		0031844A24F7940A007E7F74 /* sqlcipher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = sqlcipher.framework; path = ../Frameworks/sqlcipher.framework; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 		0075EEF724F6630F0036F902 /* PLVVodUniPlugin */ = {
 			isa = PBXGroup;
 			children = (
+				00120629261552FE00473968 /* PLVVodConfig.h */,
+				0012062A261552FE00473968 /* PLVVodConfig.m */,
 				003184C124F7A9A4007E7F74 /* PLVVodConfigModule.h */,
 				003184C224F7A9A4007E7F74 /* PLVVodConfigModule.m */,
 				00428303250620BD00EBC8E9 /* PLVVodInfoModule.h */,
@@ -162,6 +168,7 @@
 				003184C324F7A9A4007E7F74 /* PLVVodConfigModule.h in Headers */,
 				0031849624F7968C007E7F74 /* PLVMarqueeViewModel.h in Headers */,
 				006C15E924FE4AE800A93571 /* PLVVodUtils.h in Headers */,
+				0012062B261552FF00473968 /* PLVVodConfig.h in Headers */,
 				0075EF0024F6630F0036F902 /* PLVVodPluginProxy.h in Headers */,
 				0031849724F7968C007E7F74 /* PLVMarquee.h in Headers */,
 				00428305250620BD00EBC8E9 /* PLVVodInfoModule.h in Headers */,
@@ -242,6 +249,7 @@
 				0075EF0324F6630F0036F902 /* PLVVodPluginProxy.m in Sources */,
 				006C15E524FDFA9D00A93571 /* PLVVodPlayerComponent.m in Sources */,
 				0031849524F7968C007E7F74 /* PLVMarquee.m in Sources */,
+				0012062C261552FF00473968 /* PLVVodConfig.m in Sources */,
 				006C15EA24FE4AE800A93571 /* PLVVodUtils.m in Sources */,
 				0031849824F7968C007E7F74 /* PLVMarqueeViewModel.m in Sources */,
 				00428306250620BD00EBC8E9 /* PLVVodInfoModule.m in Sources */,
