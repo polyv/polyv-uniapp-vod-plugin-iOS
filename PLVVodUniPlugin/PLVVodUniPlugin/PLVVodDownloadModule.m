@@ -72,7 +72,7 @@
     
     __weak typeof(self) weakSelf = self;
     PLVVodDownloadManager *downloadManager = [PLVVodDownloadManager sharedManager];
-
+    
     // 获取所有下载任务信息(缓冲中，已缓存)
     [downloadManager requestDownloadInfosWithCompletion:^(NSArray<PLVVodDownloadInfo *> *downloadInfos) {
         for (PLVVodDownloadInfo *info in downloadInfos) {
@@ -122,7 +122,9 @@ WX_EXPORT_METHOD(@selector(getDownloadList:callback:))
     NSMutableArray *downloadList = [NSMutableArray array];
     for (NSString *vid in self.downloadInfoDict) {
         PLVVodDownloadInfo *downloadInfo = self.downloadInfoDict[vid];
-        NSDictionary *subDict = @{@"vid": vid, @"level": @(downloadInfo.quality)};
+        //新增下载列表数据返回信息
+        NSDictionary *subDict = [PLVVodDownloadModule
+                             formatDownloadInfoToDictionary:downloadInfo];
         [downloadList addObject:subDict];
     }
     
@@ -173,40 +175,40 @@ WX_EXPORT_METHOD(@selector(addDownloader:callback:))
         }
         
         __weak typeof(self) weakSelf = self;
-       [PLVVodVideo requestVideoWithVid:vid completion:^(PLVVodVideo *video, NSError *error) {
-           if (callback) {
-               if (error || video == nil || !video.available) {
-                   NSDictionary *retValue = @{@"errMsg": @"下载器创建失败"};
-                   NSDictionary *ret = [NSDictionary dictionaryWithObject:retValue forKey:vid];
-                   callback(ret, NO);
-               } else {
-                   PLVVodDownloadInfo *downloadInfo = [[PLVVodDownloadManager sharedManager] downloadVideo:video quality:level];
-                   if (downloadInfo) {
-                       weakSelf.callbackDict[vid] = callback;
-                       downloadInfo.progressDidChangeBlock = ^(PLVVodDownloadInfo *info) {
-                           [weakSelf downloadProgressChanged:info];
-                       };
-                       downloadInfo.stateDidChangeBlock = ^(PLVVodDownloadInfo *info) {
-                           [weakSelf downloadStatusChanged:info];
-                       };
-                       weakSelf.downloadInfoDict[vid] = downloadInfo;
-                   } else {
-                       PLVVodQuality videoQuality = [PLVVodDownloadManager videoExist:vid];
-                       if (videoQuality > 0) {
-                           downloadInfo = [[PLVVodDownloadManager sharedManager] requestDownloadInfoWithVid:vid];
-                           weakSelf.downloadInfoDict[downloadInfo.vid] = downloadInfo;
-                           NSDictionary *retValue = @{@"downloadStatus": @"finished", @"downloadPercentage": @(100)};
-                           NSDictionary *ret = [NSDictionary dictionaryWithObject:retValue forKey:vid];
-                           callback(ret, NO);
-                       } else {
-                           NSDictionary *retValue = @{@"errMsg": @"下载器创建失败"};
-                           NSDictionary *ret = [NSDictionary dictionaryWithObject:retValue forKey:vid];
-                           callback(ret, NO);
-                       }
-                   }
-               }
-           }
-       }];
+        [PLVVodVideo requestVideoPriorityCacheWithVid:vid completion:^(PLVVodVideo *video, NSError *error) {
+            if (callback) {
+                if (error || video == nil || !video.available) {
+                    NSDictionary *retValue = @{@"errMsg": @"下载器创建失败"};
+                    NSDictionary *ret = [NSDictionary dictionaryWithObject:retValue forKey:vid];
+                    callback(ret, NO);
+                } else {
+                    PLVVodDownloadInfo *downloadInfo = [[PLVVodDownloadManager sharedManager] downloadVideo:video quality:level];
+                    if (downloadInfo) {
+                        weakSelf.callbackDict[vid] = callback;
+                        downloadInfo.progressDidChangeBlock = ^(PLVVodDownloadInfo *info) {
+                            [weakSelf downloadProgressChanged:info];
+                        };
+                        downloadInfo.stateDidChangeBlock = ^(PLVVodDownloadInfo *info) {
+                            [weakSelf downloadStatusChanged:info];
+                        };
+                        weakSelf.downloadInfoDict[vid] = downloadInfo;
+                    } else {
+                        PLVVodQuality videoQuality = [PLVVodDownloadManager videoExist:vid];
+                        if (videoQuality > 0) {
+                            downloadInfo = [[PLVVodDownloadManager sharedManager] requestDownloadInfoWithVid:vid];
+                            weakSelf.downloadInfoDict[downloadInfo.vid] = downloadInfo;
+                            NSDictionary *retValue = @{@"downloadStatus": @"finished", @"downloadPercentage": @(100)};
+                            NSDictionary *ret = [NSDictionary dictionaryWithObject:retValue forKey:vid];
+                            callback(ret, NO);
+                        } else {
+                            NSDictionary *retValue = @{@"errMsg": @"下载器创建失败"};
+                            NSDictionary *ret = [NSDictionary dictionaryWithObject:retValue forKey:vid];
+                            callback(ret, NO);
+                        }
+                    }
+                }
+            }
+        }];
     }
 }
 
@@ -231,7 +233,7 @@ WX_EXPORT_METHOD_SYNC(@selector(isVideoExist:))
     if (level < 1 || level > 3) {
         errMsg = @"请传入正确的码率";
     }
-
+    
     NSDictionary *ret = nil;
     if (errMsg) {
         ret = @{@"errMsg": errMsg};
@@ -349,6 +351,31 @@ WX_EXPORT_METHOD(@selector(deleteAllVideo))
     [self.downloadInfoDict removeAllObjects];
 }
 
+//监听所有下载事件状态
+WX_EXPORT_METHOD(@selector(setListenDownloadStatus:callback:))
+
+- (void)setListenDownloadStatus:(NSDictionary *)options
+                       callback:(WXModuleKeepAliveCallback)callback {
+    if (!callback) return;
+    
+    if (!self.getDownloadListFinish) {
+        self.getDownloadListCallback = callback;
+        return;
+    }
+    
+    __weak typeof(self) weakSelf = self;
+    for (NSString *vid in self.downloadInfoDict) {
+        PLVVodDownloadInfo *downloadInfo = self.downloadInfoDict[vid];
+        weakSelf.callbackDict[vid] = callback;
+        downloadInfo.progressDidChangeBlock = ^(PLVVodDownloadInfo *info) {
+            [weakSelf downloadProgressChanged:info];
+        };
+        downloadInfo.stateDidChangeBlock = ^(PLVVodDownloadInfo *info) {
+            [weakSelf downloadStatusChanged:info];
+        };
+    }
+}
+
 #pragma mark - Private
 
 - (void)downloadProgressChanged:(PLVVodDownloadInfo *)info {
@@ -383,9 +410,14 @@ WX_EXPORT_METHOD(@selector(deleteAllVideo))
         NSDictionary *retValue = @{@"downloadStatus": statusStr};
         NSDictionary *ret = [NSDictionary dictionaryWithObject:retValue forKey:info.vid];
         BOOL keep = (info.state != PLVVodDownloadStateSuccess);
-        callback(ret, keep);
         if (!keep) {
             [self.callbackDict removeObjectForKey:info.vid];
+        }
+
+        if (self.callbackDict.allKeys.count>0) {
+            callback(ret, YES);
+        } else {
+            callback(ret, NO);
         }
     }
 }
@@ -407,6 +439,17 @@ WX_EXPORT_METHOD(@selector(deleteAllVideo))
         statusStr = @"failed";
     }
     return statusStr;
+}
++ (NSMutableDictionary *)formatDownloadInfoToDictionary:(PLVVodDownloadInfo *)info {
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+    dic[@"vid"] = info.vid;
+    dic[@"duration"] = @(info.duration);
+    dic[@"title"] = info.title;
+    dic[@"progress"] = @(info.progress);
+    dic[@"fileSize"] = @(info.filesize);
+    dic[@"level"]=@(info.quality);
+    
+    return dic;
 }
 
 @end

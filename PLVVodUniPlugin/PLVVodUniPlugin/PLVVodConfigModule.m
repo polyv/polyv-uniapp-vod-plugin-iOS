@@ -19,6 +19,10 @@ WX_EXPORT_METHOD(@selector(setConfig:callback:))
     NSString *configStr = [PLVVodUtils stringValueWithDictionary:options forKey:@"config" defaultValue:nil];
     NSString *errMsg = nil;
     
+#pragma mark --todo 版本需要暂时配置sdk
+    [PLVVodSettings sharedSettings].enableHttpDNS = NO;
+    [PLVVodSettings sharedSettings].enableIPV6 = YES;
+
     if (![PLVVodUtils isValidString:configStr]) {
         errMsg = @"加密串参数为空";
     } else {

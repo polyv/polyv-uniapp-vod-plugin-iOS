@@ -1,34 +1,51 @@
-# README
+## PLVUniAppVodPlugin-iOS
 
-本项目是<u>针对保利威云点播的uni-app客户提供的打包工程</u>（不支持模拟器运行调试），用于打包 uni-app 项目（包含云点播插件）的自定义基座，也可用于打正式包。使用该项目进行离线打包，可使你免受 uni-app 云打包的限制。支持在该工程的基础上添加其他uni-app插件。
+### 项目介绍
 
-⚠️注意：Polyv云点播插件在 iOS 端仅支持云端打自定义基座包，正式发布时，需使用该打包工程进行离线打包。
-
-
+> 本项目是针对保利威云点播的uni-app客户提供的打包工程（**不支持模拟器运行调试**），用于打包 uni-app 项目（包含云点播插件）的自定义基座，也可用于打正式包。使用该项目进行离线打包，可使你免受 uni-app 云打包的限制。支持在该工程的基础上添加其他uni-app插件。
+>
+> ⚠️注意：Polyv云点播插件在 iOS 端仅支持云端打自定义基座包，正式发布时，需使用该打包工程进行离线打包。
 
 ## 开发环境
 
 1. iOS 开发环境：Xcode 11.0+
 2. uni-app 开发环境：HBuilderX 2.8.0+
 
-
-
 ## 前提条件
 
 1. [保利威官网](http://www.polyv.net/)账号
 2. 苹果开发者账号
 
-
-
 ## 下载离线 SDK 包
 
 该项目想正常运行，需先到 uni-app 的官网下载离线 SDK 包 —— [下载链接](https://nativesupport.dcloud.net.cn/AppDocs/download/ios)。
 
-⚠️注意，SDK 包的与 HBuilderX 的版本一一对应，请根据你 HBuilderX 的版本下载对应的 SDK 包。本项目基于 v2.8.6 版本的 SDK 进行开发，建议不要使用跟该版本差异太大的版本。 
+⚠️注意，SDK 包的与 HBuilderX 的版本一一对应，请根据你 HBuilderX 的版本下载对应的 SDK 包。本项目基于 v2.8.6 版本的 SDK 进行开发，建议不要使用跟该版本差异太大的版本。
 
-将下载后的离线 SDK 包中的 SDK 文件夹放到当前项目的<u>根目录</u>下。
+将下载后的离线 SDK 包中的 SDK 文件夹放到当前项目的根目录下。
 
+如下面所示：
 
+```
+.
+├── PLVUniAppVodPlugin-iOS
+│   ├── HBuilder-Vod
+│   ├── HBuilder-Vod.xcodeproj
+│   ├── PLVVodUniPlugin
+│   ├── Podfile
+│   └── README.md
+└── SDK
+    ├── Bundles
+    ├── Libs
+    ├── control.xml
+    └── inc
+```
+
+## 测试运行
+
+使用终端命令行进入工程目录，该目录下有`Podfile`文件，使用命令`pod install`安装依赖库。安装完成后进入子目录`PLVVodUniPlugin`，该目录下也有`Podfile`文件，同样使用命令`pod install`安装依赖库。
+
+以上安装完成后，打开项目根目录，会生成白色图标的 `your_name.xcworkspace`工程入口，双击打开，可以开始编译测试运行。
 
 ## 引入 App 资源
 
@@ -44,8 +61,6 @@
 
    确保 HBuilder-Vod/control.xml 里面 app 节点的 appid 属性为你的 AppID。
 
-
-
 ## 离线打包
 
 由于 uni-app 的云端打包限制了每日免费打包的次数以及免费打包的包体的大小（超过40M每次打包需充值付费），使用离线打包的方式会更加自由、方便。
@@ -58,13 +73,13 @@
 
 ### 自定义基座
 
-1. 修改 TARGETS  - HBuilder-Vod - General - Bundle Identifier 为你的 uni.${AppID去掉下划线}；
+1. 修改 TARGETS - HBuilder-Vod - General - Bundle Identifier 为你的 uni.${AppID去掉下划线}；
 
 2. 打开 HBuilder-Vod-Info.plist，确保 【Application supports iTunes file sharing】这一行的值为 YES；
 
 3. 打开 HBuilder-Vod/control.xml，确保 HBuilder 节点包含 debug、syncDebug 属性值 true：
 
-   ```xml
+   ```
    <HBuilder debug="true" syncDebug="true" version="1.9.9.56853">
    ```
 
@@ -76,8 +91,6 @@
 
 把 iPhone 设备用数据线连接到电脑上，选择【信任】当前连接设备，HBuilderX 检测到真机之后，选择运行到手机即可。如果检测不到真机，参考[HBuilder/HBuilderX真机运行、手机运行、真机联调常见问题](https://ask.dcloud.net.cn/article/97)
 
-
-
 ### 正式包
 
 1. 确保 Bundle Identifier 与你的发布授权文件相匹配。
@@ -86,11 +99,8 @@
 
 选择菜单栏【Product】-【Archive】进行打包。
 
-
-
 ## 项目配置
 
 关于如何对 app 进行个性化配置，譬如 app 图标、app 名称、app 版本号、app 启动图等，uni-app 官方有详细的文档指导，见：[iOS 原生工程配置](https://nativesupport.dcloud.net.cn/AppDocs/usesdk/ios?id=开发环境)。
 
 该项目还支持添加其他 uni-app 原生插件，添加方法详见 uni-app 官方的指引文档[iOS 离线打包使用插件](https://nativesupport.dcloud.net.cn/NativePlugin/offline_package/ios?id=预备环境)。
-
