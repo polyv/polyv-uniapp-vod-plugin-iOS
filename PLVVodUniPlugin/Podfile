@@ -3,6 +3,6 @@ use_frameworks!
 
 target 'PLVVodUniPlugin' do
 
-  pod 'PolyvVodSDK', '~> 2.15.0'
+  pod 'PolyvVodSDK', '~> 2.15.1'
 
 end

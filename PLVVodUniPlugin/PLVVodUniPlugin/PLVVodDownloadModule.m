@@ -15,6 +15,8 @@
 @property (nonatomic, assign) BOOL getDownloadListFinish;
 /// getDownloadList 方法的回调（调用该方法时尚未从异步方法里面获取到下载队列时）
 @property (nonatomic, copy) WXModuleKeepAliveCallback getDownloadListCallback;
+/// setListenDownloadStatus 方法的回调（调用该方法时尚未从异步方法里面获取到下载队列时）
+@property (nonatomic, copy) WXModuleKeepAliveCallback listenDownloadCallback;
 /// 下载信息字典（vid 为键，PLVVodDownloadInfo 对象为值）
 @property (nonatomic, strong) NSMutableDictionary<NSString *, PLVVodDownloadInfo *> *downloadInfoDict;
 /// 下载信息字典（vid 为键，WXModuleKeepAliveCallback 对象为值）
@@ -61,6 +63,10 @@
     if (getDownloadListFinish && self.getDownloadListCallback) {
         [self getDownloadList:nil callback:self.getDownloadListCallback];
     }
+    //下载完，则如果有回调监听则设置监听回调对象
+    if (getDownloadListFinish && self.listenDownloadCallback) {
+        [self setListenDownloadStatus:nil callback:self.listenDownloadCallback];
+    }
 }
 
 #pragma mark - Initialization
@@ -72,11 +78,17 @@
     
     __weak typeof(self) weakSelf = self;
     PLVVodDownloadManager *downloadManager = [PLVVodDownloadManager sharedManager];
-    
     // 获取所有下载任务信息(缓冲中，已缓存)
     [downloadManager requestDownloadInfosWithCompletion:^(NSArray<PLVVodDownloadInfo *> *downloadInfos) {
         for (PLVVodDownloadInfo *info in downloadInfos) {
             weakSelf.downloadInfoDict[info.vid] = info;
+        }
+//        处理已经下载完成的视频解压后不存在已缓存列表的问题
+        NSArray<PLVVodDownloadInfo *> *dbInfos = [[PLVVodDownloadManager sharedManager] requestDownloadCompleteList];
+        for (PLVVodDownloadInfo *info in dbInfos) {
+            if (![weakSelf.downloadInfoDict.allKeys containsObject:info.vid]) {
+                weakSelf.downloadInfoDict[info.vid] = info;
+            }
         }
         weakSelf.getDownloadListFinish = YES;
     }];
@@ -124,17 +136,17 @@ WX_EXPORT_METHOD(@selector(getDownloadList:callback:))
         PLVVodDownloadInfo *downloadInfo = self.downloadInfoDict[vid];
         //新增下载列表数据返回信息
         NSDictionary *subDict = [PLVVodDownloadModule
-                             formatDownloadInfoToDictionary:downloadInfo];
+                                 formatDownloadInfoToDictionary:downloadInfo];
         [downloadList addObject:subDict];
     }
-    
     NSDictionary *ret = [NSDictionary dictionaryWithObject:downloadList forKey:@"downloadList"];
     callback(ret, NO);
 }
 
 WX_EXPORT_METHOD(@selector(addDownloader:callback:))
 
-- (void)addDownloader:(NSDictionary *)options callback:(WXModuleKeepAliveCallback)callback {
+- (void)addDownloader:(NSDictionary *)options
+             callback:(WXModuleKeepAliveCallback)callback {
     NSArray *downloadArr = options[@"downloadArr"];
     if (!downloadArr || ![downloadArr isKindOfClass:[NSArray class]] || [downloadArr count] == 0) {
         return;
@@ -144,12 +156,8 @@ WX_EXPORT_METHOD(@selector(addDownloader:callback:))
         if (!dict || ![dict isKindOfClass:[NSDictionary class]] || dict.count == 0) {
             continue;
         }
-        
         NSString *vid = [PLVVodUtils stringValueWithDictionary:dict forKey:@"vid" defaultValue:nil];
-        if (![PLVVodUtils isValidString:vid]) {
-            continue;
-        }
-        
+        //vid的正确性
         if (![PLVVodUtils validateVid:vid]) {
             if (callback) {
                 NSDictionary *retValue = @{@"errMsg": @"vid无效"};
@@ -158,12 +166,10 @@ WX_EXPORT_METHOD(@selector(addDownloader:callback:))
             }
             continue;
         }
-        
         // ----- 判断该 vid 视频是否已存在
-        if (self.downloadInfoDict[vid]) {
+        if (self.downloadInfoDict[vid] && [PLVVodDownloadManager videoExist:vid]) {
             continue;
         }
-        
         NSInteger level = [dict[@"level"] integerValue];
         if (level < 1 || level > 3) {
             if (callback) {
@@ -184,13 +190,16 @@ WX_EXPORT_METHOD(@selector(addDownloader:callback:))
                 } else {
                     PLVVodDownloadInfo *downloadInfo = [[PLVVodDownloadManager sharedManager] downloadVideo:video quality:level];
                     if (downloadInfo) {
-                        weakSelf.callbackDict[vid] = callback;
-                        downloadInfo.progressDidChangeBlock = ^(PLVVodDownloadInfo *info) {
-                            [weakSelf downloadProgressChanged:info];
-                        };
-                        downloadInfo.stateDidChangeBlock = ^(PLVVodDownloadInfo *info) {
-                            [weakSelf downloadStatusChanged:info];
-                        };
+                        //setListenDownloadStatus已经初始化监听所有下载进度的block
+                        if (self.listenDownloadCallback) {
+                            weakSelf.callbackDict[vid] = weakSelf.listenDownloadCallback;
+                            downloadInfo.progressDidChangeBlock = ^(PLVVodDownloadInfo *info) {
+                                [weakSelf downloadProgressChanged:info];
+                            };
+                            downloadInfo.stateDidChangeBlock = ^(PLVVodDownloadInfo *info) {
+                                [weakSelf downloadStatusChanged:info];
+                            };
+                        }
                         weakSelf.downloadInfoDict[vid] = downloadInfo;
                     } else {
                         PLVVodQuality videoQuality = [PLVVodDownloadManager videoExist:vid];
@@ -262,35 +271,13 @@ WX_EXPORT_METHOD(@selector(startDownloader:callback:))
         return;
     }
     
-    __weak typeof(self) weakSelf = self;
     [[PLVVodDownloadManager sharedManager] startDownloadWithVid:vid];
-    PLVVodDownloadInfo *downloadInfo = [[PLVVodDownloadManager sharedManager] requestDownloadInfoWithVid:vid];
-    downloadInfo.progressDidChangeBlock = ^(PLVVodDownloadInfo *info) {
-        [weakSelf downloadProgressChanged:info];
-    };
-    downloadInfo.stateDidChangeBlock = ^(PLVVodDownloadInfo *info) {
-        [weakSelf downloadStatusChanged:info];
-    };
-    self.downloadInfoDict[vid] = downloadInfo;
 }
 
 WX_EXPORT_METHOD(@selector(startAllDownloader))
 
 - (void)startAllDownloader {
     [[PLVVodDownloadManager sharedManager] startDownload];
-    
-    __weak typeof(self) weakSelf = self;
-    [[PLVVodDownloadManager sharedManager] requstDownloadProcessingListWithCompletion:^(NSArray<PLVVodDownloadInfo *> *downloadInfos) {
-        for (PLVVodDownloadInfo *downloadInfo in downloadInfos) {
-            downloadInfo.progressDidChangeBlock = ^(PLVVodDownloadInfo *info) {
-                [weakSelf downloadProgressChanged:info];
-            };
-            downloadInfo.stateDidChangeBlock = ^(PLVVodDownloadInfo *info) {
-                [weakSelf downloadStatusChanged:info];
-            };
-            weakSelf.downloadInfoDict[downloadInfo.vid] = downloadInfo;
-        }
-    }];
 }
 
 WX_EXPORT_METHOD(@selector(stopDownloader:callback:))
@@ -341,6 +328,7 @@ WX_EXPORT_METHOD(@selector(deleteVideo:callback:))
     [PLVVodDownloadManager removeVideoWithVid:vid error:nil];
     [[PLVVodDownloadManager sharedManager] removeDownloadWithVid:vid error:nil];
     [self.downloadInfoDict removeObjectForKey:vid];
+    callback(@{@"vid": vid, @"errMsg":@""}, NO);
 }
 
 WX_EXPORT_METHOD(@selector(deleteAllVideo))
@@ -356,23 +344,28 @@ WX_EXPORT_METHOD(@selector(setListenDownloadStatus:callback:))
 
 - (void)setListenDownloadStatus:(NSDictionary *)options
                        callback:(WXModuleKeepAliveCallback)callback {
-    if (!callback) return;
-    
-    if (!self.getDownloadListFinish) {
-        self.getDownloadListCallback = callback;
+    if (!callback) {
+        self.listenDownloadCallback(nil, NO);
+        self.listenDownloadCallback = nil;
         return;
+    } else {
+        self.listenDownloadCallback = callback;
     }
+    //没有加载完下载列表
+    if (!self.getDownloadListFinish) return;
     
     __weak typeof(self) weakSelf = self;
     for (NSString *vid in self.downloadInfoDict) {
         PLVVodDownloadInfo *downloadInfo = self.downloadInfoDict[vid];
-        weakSelf.callbackDict[vid] = callback;
-        downloadInfo.progressDidChangeBlock = ^(PLVVodDownloadInfo *info) {
-            [weakSelf downloadProgressChanged:info];
-        };
-        downloadInfo.stateDidChangeBlock = ^(PLVVodDownloadInfo *info) {
-            [weakSelf downloadStatusChanged:info];
-        };
+        if (downloadInfo.state != PLVVodDownloadStateSuccess) {
+            weakSelf.callbackDict[vid] = self.listenDownloadCallback;
+            downloadInfo.progressDidChangeBlock = ^(PLVVodDownloadInfo *info) {
+                [weakSelf downloadProgressChanged:info];
+            };
+            downloadInfo.stateDidChangeBlock = ^(PLVVodDownloadInfo *info) {
+                [weakSelf downloadStatusChanged:info];
+            };
+        }
     }
 }
 
@@ -413,12 +406,7 @@ WX_EXPORT_METHOD(@selector(setListenDownloadStatus:callback:))
         if (!keep) {
             [self.callbackDict removeObjectForKey:info.vid];
         }
-
-        if (self.callbackDict.allKeys.count>0) {
-            callback(ret, YES);
-        } else {
-            callback(ret, NO);
-        }
+        callback(ret, YES);
     }
 }
 
@@ -445,7 +433,7 @@ WX_EXPORT_METHOD(@selector(setListenDownloadStatus:callback:))
     dic[@"vid"] = info.vid;
     dic[@"duration"] = @(info.duration);
     dic[@"title"] = info.title;
-    dic[@"progress"] = @(info.progress);
+    dic[@"progress"] = @(info.progress * 100);
     dic[@"fileSize"] = @(info.filesize);
     dic[@"level"]=@(info.quality);
     

@@ -52,6 +52,7 @@
 		360DC21C2644E40500951296 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 360DC1FF2644E40400951296 /* SVProgressHUD.bundle */; };
 		360DC21D2644E40500951296 /* weex-polyfill.js in Resources */ = {isa = PBXBuildFile; fileRef = 360DC2002644E40400951296 /* weex-polyfill.js */; };
 		360DC21E2644E40500951296 /* weexUniJs.js in Resources */ = {isa = PBXBuildFile; fileRef = 360DC2012644E40400951296 /* weexUniJs.js */; };
+		362D0534264E0ED700244C76 /* liblibLog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AFD8161CB50C4000C0F062 /* liblibLog.a */; };
 		67065F3A2243868400DC71CA /* Default-896h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67065F1E2243868300DC71CA /* Default-896h@2x.png */; };
 		67065F3B2243868400DC71CA /* Default-Landscape-812h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67065F1F2243868300DC71CA /* Default-Landscape-812h@3x.png */; };
 		67065F3C2243868400DC71CA /* Default-Landscape-896h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67065F202243868300DC71CA /* Default-Landscape-896h@3x.png */; };
@@ -950,6 +951,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8616F21825CA904E00FA9C42 /* liblibIO.a in Frameworks */,
+				362D0534264E0ED700244C76 /* liblibLog.a in Frameworks */,
 				0075EF0C24F6637F0036F902 /* PLVVodUniPlugin.framework in Frameworks */,
 				005204B124F640890023AE9C /* liblibNativeUI.a in Frameworks */,
 				005204B524F640890023AE9C /* liblibUI.a in Frameworks */,
@@ -2337,6 +2339,7 @@
 				ORGANIZATIONNAME = DCloud;
 				TargetAttributes = {
 					8EED6297198A1D13000A4449 = {
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -2650,7 +2653,7 @@
 					"$(PROJECT_DIR)",
 					"$(SRCROOT)/../SDK/Libs",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -2703,7 +2706,7 @@
 					"$(PROJECT_DIR)",
 					"$(SRCROOT)/../SDK/Libs",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.2;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(inherited)",

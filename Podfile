@@ -4,6 +4,5 @@ use_frameworks!
 target 'HBuilder-Vod' do
 
 #  保利威 iOS 点播SDK
-  pod 'PolyvVodSDK', '~> 2.15.0'
-
+  pod 'PolyvVodSDK', '~> 2.15.1'
 end

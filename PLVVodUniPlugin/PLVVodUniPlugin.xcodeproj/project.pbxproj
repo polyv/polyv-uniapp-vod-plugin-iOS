@@ -21,6 +21,12 @@
 		006C15EA24FE4AE800A93571 /* PLVVodUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 006C15E824FE4AE800A93571 /* PLVVodUtils.m */; };
 		0075EF0024F6630F0036F902 /* PLVVodPluginProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0075EEF924F6630F0036F902 /* PLVVodPluginProxy.h */; };
 		0075EF0324F6630F0036F902 /* PLVVodPluginProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0075EEFC24F6630F0036F902 /* PLVVodPluginProxy.m */; };
+		3639DAC62669CE830029A208 /* PLVMarquee.m in Sources */ = {isa = PBXBuildFile; fileRef = 3639DABF2669CE830029A208 /* PLVMarquee.m */; };
+		3639DAC72669CE830029A208 /* PLVMarqueeViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3639DAC02669CE830029A208 /* PLVMarqueeViewModel.h */; };
+		3639DAC82669CE830029A208 /* PLVMarquee.h in Headers */ = {isa = PBXBuildFile; fileRef = 3639DAC12669CE830029A208 /* PLVMarquee.h */; };
+		3639DAC92669CE830029A208 /* PLVMarqueeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3639DAC22669CE830029A208 /* PLVMarqueeViewModel.m */; };
+		3639DACA2669CE830029A208 /* PLVTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3639DAC42669CE830029A208 /* PLVTimer.m */; };
+		3639DACB2669CE830029A208 /* PLVTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3639DAC52669CE830029A208 /* PLVTimer.h */; };
 		46EC1EFD29D7ECD4553E559A /* Pods_PLVVodUniPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E9D46A4EBEC6D90259D7C8 /* Pods_PLVVodUniPlugin.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +47,12 @@
 		0075EEFC24F6630F0036F902 /* PLVVodPluginProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLVVodPluginProxy.m; sourceTree = "<group>"; };
 		0075EEFD24F6630F0036F902 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13066FB799905D3A8FF58CCC /* Pods-PLVVodUniPlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PLVVodUniPlugin.debug.xcconfig"; path = "Target Support Files/Pods-PLVVodUniPlugin/Pods-PLVVodUniPlugin.debug.xcconfig"; sourceTree = "<group>"; };
+		3639DABF2669CE830029A208 /* PLVMarquee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLVMarquee.m; sourceTree = "<group>"; };
+		3639DAC02669CE830029A208 /* PLVMarqueeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLVMarqueeViewModel.h; sourceTree = "<group>"; };
+		3639DAC12669CE830029A208 /* PLVMarquee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLVMarquee.h; sourceTree = "<group>"; };
+		3639DAC22669CE830029A208 /* PLVMarqueeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLVMarqueeViewModel.m; sourceTree = "<group>"; };
+		3639DAC42669CE830029A208 /* PLVTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLVTimer.m; sourceTree = "<group>"; };
+		3639DAC52669CE830029A208 /* PLVTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLVTimer.h; sourceTree = "<group>"; };
 		53E9D46A4EBEC6D90259D7C8 /* Pods_PLVVodUniPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PLVVodUniPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9759EDBE245048A40076CC51 /* PLVVodUniPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PLVVodUniPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C645DF2E804338C1BC81C2 /* Pods-PLVVodUniPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PLVVodUniPlugin.release.xcconfig"; path = "Target Support Files/Pods-PLVVodUniPlugin/Pods-PLVVodUniPlugin.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +92,36 @@
 			path = PLVVodUniPlugin;
 			sourceTree = "<group>";
 		};
+		3639DABD2669CDF40029A208 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				3639DABE2669CE830029A208 /* PLVMarquee */,
+				3639DAC32669CE830029A208 /* PLVTimer */,
+			);
+			name = Library;
+			path = ../Library;
+			sourceTree = "<group>";
+		};
+		3639DABE2669CE830029A208 /* PLVMarquee */ = {
+			isa = PBXGroup;
+			children = (
+				3639DABF2669CE830029A208 /* PLVMarquee.m */,
+				3639DAC02669CE830029A208 /* PLVMarqueeViewModel.h */,
+				3639DAC12669CE830029A208 /* PLVMarquee.h */,
+				3639DAC22669CE830029A208 /* PLVMarqueeViewModel.m */,
+			);
+			path = PLVMarquee;
+			sourceTree = "<group>";
+		};
+		3639DAC32669CE830029A208 /* PLVTimer */ = {
+			isa = PBXGroup;
+			children = (
+				3639DAC42669CE830029A208 /* PLVTimer.m */,
+				3639DAC52669CE830029A208 /* PLVTimer.h */,
+			);
+			path = PLVTimer;
+			sourceTree = "<group>";
+		};
 		79C8A2A2584B933976470098 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +134,7 @@
 		9759EDB4245048A40076CC51 = {
 			isa = PBXGroup;
 			children = (
+				3639DABD2669CDF40029A208 /* Library */,
 				0075EEF724F6630F0036F902 /* PLVVodUniPlugin */,
 				9759EDBF245048A40076CC51 /* Products */,
 				97A515C224518A6C00BC028D /* Frameworks */,
@@ -123,12 +166,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				006C15E424FDFA9D00A93571 /* PLVVodPlayerComponent.h in Headers */,
+				3639DAC72669CE830029A208 /* PLVMarqueeViewModel.h in Headers */,
 				00428309250623D000EBC8E9 /* PLVVodDownloadModule.h in Headers */,
 				003184C324F7A9A4007E7F74 /* PLVVodConfigModule.h in Headers */,
+				3639DAC82669CE830029A208 /* PLVMarquee.h in Headers */,
 				006C15E924FE4AE800A93571 /* PLVVodUtils.h in Headers */,
 				0012062B261552FF00473968 /* PLVVodConfig.h in Headers */,
 				0075EF0024F6630F0036F902 /* PLVVodPluginProxy.h in Headers */,
 				00428305250620BD00EBC8E9 /* PLVVodInfoModule.h in Headers */,
+				3639DACB2669CE830029A208 /* PLVTimer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				003184C424F7A9A4007E7F74 /* PLVVodConfigModule.m in Sources */,
+				3639DAC92669CE830029A208 /* PLVMarqueeViewModel.m in Sources */,
+				3639DAC62669CE830029A208 /* PLVMarquee.m in Sources */,
 				0075EF0324F6630F0036F902 /* PLVVodPluginProxy.m in Sources */,
+				3639DACA2669CE830029A208 /* PLVTimer.m in Sources */,
 				006C15E524FDFA9D00A93571 /* PLVVodPlayerComponent.m in Sources */,
 				0012062C261552FF00473968 /* PLVVodConfig.m in Sources */,
 				006C15EA24FE4AE800A93571 /* PLVVodUtils.m in Sources */,
@@ -290,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -345,7 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -378,7 +427,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.dcloud.PLVVodPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -410,7 +459,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.dcloud.PLVVodPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
