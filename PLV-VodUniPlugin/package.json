@@ -1,0 +1,103 @@
+{
+	"name": "Polyv云点播插件",
+	"id": "PLV-VodUniPlugin",
+	"version": "0.2.0",
+	"description": "该插件封装了保利威原生点播 SDK，能实现保利威视频播放、下载等功能。",
+	"_dp_type": "nativeplugin",
+	"_dp_nativeplugin": {
+		"ios": {
+			"plugins": [
+				{
+					"type": "module",
+					"name": "PLV-VodUniPlugin-ConfigModule",
+					"class": "PLVVodConfigModule"
+				},
+				{
+					"type": "module",
+					"name": "PLV-VodUniPlugin-InfoModule",
+					"class": "PLVVodInfoModule"
+				},
+				{
+					"type": "module",
+					"name": "PLV-VodUniPlugin-DownloadModule",
+					"class": "PLVVodDownloadModule"
+				},
+				{
+					"type": "component",
+					"name": "plv-player",
+					"class": "PLVVodPlayerComponent"
+				}
+			],
+			"hooksClass": "PLVVodPluginProxy",
+			"frameworks": [
+				"PLVIJKPlayer.framework",
+				"libresolv.tbd",
+				"sqliterk.framework",
+				"WCDB.framework",
+				"sqlcipher.framework"
+			],
+			"embedFrameworks": [
+				"PLVIJKPlayer.framework",
+				"sqliterk.framework",
+				"WCDB.framework",
+				"sqlcipher.framework"
+			],
+			"integrateType": "framework",
+			"privacies": [
+				"NSPhotoLibraryUsageDescription",
+				"NSPhotoLibraryAddUsageDescription"
+			],
+			"deploymentTarget": "9.0",
+			"validArchitectures": [
+				"arm64",
+				"armv7"
+			]
+		},
+		"android": {
+			"plugins": [
+				{
+					"type": "component",
+					"name": "plv-player",
+					"class": "com.easefun.plvvod.PolyvVodComponent"
+				},
+				{
+					"type": "module",
+					"name": "PLV-VodUniPlugin-ConfigModule",
+					"class": "com.easefun.plvvod.PolyvConfigModule"
+				},
+				{
+					"type": "module",
+					"name": "PLV-VodUniPlugin-DownloadModule",
+					"class": "com.easefun.plvvod.PolyvDownloadModule"
+				},
+				{
+					"type": "module",
+					"name": "PLV-VodUniPlugin-InfoModule",
+					"class": "com.easefun.plvvod.PolyvVideoInfoModule"
+				}
+			],
+			"hooksClass": "com.easefun.plvvod.PolyvAppProxy",
+			"integrateType": "aar",
+			"compileOptions": {
+				"sourceCompatibility": "1.8",
+				"targetCompatibility": "1.8"
+			},
+			"abis": [
+				"arm64-v8a",
+				"armeabi-v7a",
+				"x86"
+			],
+			"minSdkVersion": "19",
+			"permissions": [
+				"<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+				"<uses-permission android:name=\"android.permission.INTERNET\" />"
+			],
+			"dependencies": [
+				{
+					"id": "com.google.code.gson:gson",
+					"source": "implementation('com.google.code.gson:gson:2.8.5')"
+				}
+			]
+		}
+	}
+}

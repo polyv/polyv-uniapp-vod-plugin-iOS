@@ -13,11 +13,8 @@
 		005204B824F640890023AE9C /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0052045F24F640820023AE9C /* libSDWebImage.a */; };
 		005204BB24F640890023AE9C /* liblibWebNavi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0052046224F640820023AE9C /* liblibWebNavi.a */; };
 		005204C724F640890023AE9C /* liblibNativeObj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0052046E24F640840023AE9C /* liblibNativeObj.a */; };
-		005204D024F6408A0023AE9C /* liblibCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0052047724F640840023AE9C /* liblibCamera.a */; };
 		005204D124F6408A0023AE9C /* liblibPDRCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0052047824F640840023AE9C /* liblibPDRCore.a */; };
 		005204D324F6408A0023AE9C /* liblibWeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0052047A24F640850023AE9C /* liblibWeex.a */; };
-		005204F224F6408A0023AE9C /* liblibNavigator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0052049924F640870023AE9C /* liblibNavigator.a */; };
-		0075EF0C24F6637F0036F902 /* PLVVodUniPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0075EF0B24F663540036F902 /* PLVVodUniPlugin.framework */; };
 		0075EF1124F66E940036F902 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0075EF1024F66E940036F902 /* Images.xcassets */; };
 		24A7515F1D9CCCC600C8B0F9 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A7515E1D9CCCC600C8B0F9 /* QuickLook.framework */; };
 		24BD5AF61C994BB200B05AA2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BD5AF51C994BB200B05AA2 /* libc++.tbd */; };
@@ -53,6 +50,7 @@
 		360DC21D2644E40500951296 /* weex-polyfill.js in Resources */ = {isa = PBXBuildFile; fileRef = 360DC2002644E40400951296 /* weex-polyfill.js */; };
 		360DC21E2644E40500951296 /* weexUniJs.js in Resources */ = {isa = PBXBuildFile; fileRef = 360DC2012644E40400951296 /* weexUniJs.js */; };
 		362D0534264E0ED700244C76 /* liblibLog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AFD8161CB50C4000C0F062 /* liblibLog.a */; };
+		36CB7C3C282E4B1700EFF9D9 /* PLVVodUniPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CB7C3B282E4B1700EFF9D9 /* PLVVodUniPlugin.framework */; };
 		67065F3A2243868400DC71CA /* Default-896h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67065F1E2243868300DC71CA /* Default-896h@2x.png */; };
 		67065F3B2243868400DC71CA /* Default-Landscape-812h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67065F1F2243868300DC71CA /* Default-Landscape-812h@3x.png */; };
 		67065F3C2243868400DC71CA /* Default-Landscape-896h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67065F202243868300DC71CA /* Default-Landscape-896h@3x.png */; };
@@ -96,23 +94,6 @@
 		8EED6594198A5743000A4449 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EED6593198A5743000A4449 /* AVFoundation.framework */; };
 		D54053163781836D3F84AD16 /* Pods_HBuilder_Vod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EA3DA4B108205EECC4009B /* Pods_HBuilder_Vod.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0075EF0A24F663540036F902 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0075EF0624F663540036F902 /* PLVVodUniPlugin.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9759EDBE245048A40076CC51;
-			remoteInfo = PLVVodUniPlugin;
-		};
-		0075EF0D24F6639A0036F902 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0075EF0624F663540036F902 /* PLVVodUniPlugin.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9759EDBD245048A40076CC51;
-			remoteInfo = PLVVodUniPlugin;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7A4980F42126ADAD00D20880 /* Embed Frameworks */ = {
@@ -179,7 +160,6 @@
 		0052047424F640840023AE9C /* liblibNotification.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibNotification.a; path = SDK/Libs/liblibNotification.a; sourceTree = "<group>"; };
 		0052047524F640840023AE9C /* libBaiduLocationPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBaiduLocationPlugin.a; path = SDK/Libs/libBaiduLocationPlugin.a; sourceTree = "<group>"; };
 		0052047624F640840023AE9C /* liblibGeolocation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibGeolocation.a; path = SDK/Libs/liblibGeolocation.a; sourceTree = "<group>"; };
-		0052047724F640840023AE9C /* liblibCamera.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibCamera.a; path = SDK/Libs/liblibCamera.a; sourceTree = "<group>"; };
 		0052047824F640840023AE9C /* liblibPDRCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibPDRCore.a; path = SDK/Libs/liblibPDRCore.a; sourceTree = "<group>"; };
 		0052047924F640850023AE9C /* liblibPGInvocation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibPGInvocation.a; path = SDK/Libs/liblibPGInvocation.a; sourceTree = "<group>"; };
 		0052047A24F640850023AE9C /* liblibWeex.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibWeex.a; path = SDK/Libs/liblibWeex.a; sourceTree = "<group>"; };
@@ -213,7 +193,6 @@
 		0052049624F640870023AE9C /* liblibBarcode.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibBarcode.a; path = SDK/Libs/liblibBarcode.a; sourceTree = "<group>"; };
 		0052049724F640870023AE9C /* libMiOauth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMiOauth.a; path = SDK/Libs/libMiOauth.a; sourceTree = "<group>"; };
 		0052049824F640870023AE9C /* libMiPushSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMiPushSDK.a; path = SDK/Libs/libMiPushSDK.a; sourceTree = "<group>"; };
-		0052049924F640870023AE9C /* liblibNavigator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibNavigator.a; path = SDK/Libs/liblibNavigator.a; sourceTree = "<group>"; };
 		0052049A24F640880023AE9C /* libDCUniBarcode.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDCUniBarcode.a; path = SDK/Libs/libDCUniBarcode.a; sourceTree = "<group>"; };
 		0052049B24F640880023AE9C /* liblibOrientation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibOrientation.a; path = SDK/Libs/liblibOrientation.a; sourceTree = "<group>"; };
 		0052049C24F640880023AE9C /* libUniAD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUniAD.a; path = SDK/Libs/libUniAD.a; sourceTree = "<group>"; };
@@ -233,7 +212,6 @@
 		005204AA24F640890023AE9C /* libSinaShare.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSinaShare.a; path = SDK/Libs/libSinaShare.a; sourceTree = "<group>"; };
 		005204AB24F640890023AE9C /* libUniPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUniPush.a; path = SDK/Libs/libUniPush.a; sourceTree = "<group>"; };
 		005204AC24F640890023AE9C /* liblibVideo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibVideo.a; path = SDK/Libs/liblibVideo.a; sourceTree = "<group>"; };
-		0075EF0624F663540036F902 /* PLVVodUniPlugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PLVVodUniPlugin.xcodeproj; path = PLVVodUniPlugin/PLVVodUniPlugin.xcodeproj; sourceTree = "<group>"; };
 		0075EF1024F66E940036F902 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		240905021C200AEF0070786F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		242725CA1D2666ED00EBD79E /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -254,7 +232,6 @@
 		24AFD80F1CB50C3F00C0F062 /* liblibAccelerometer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibAccelerometer.a; path = ../SDK/Libs/liblibAccelerometer.a; sourceTree = "<group>"; };
 		24AFD8101CB50C3F00C0F062 /* liblibBarcode.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibBarcode.a; path = ../SDK/Libs/liblibBarcode.a; sourceTree = "<group>"; };
 		24AFD8111CB50C3F00C0F062 /* liblibCache.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibCache.a; path = ../SDK/Libs/liblibCache.a; sourceTree = "<group>"; };
-		24AFD8121CB50C3F00C0F062 /* liblibCamera.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibCamera.a; path = ../SDK/Libs/liblibCamera.a; sourceTree = "<group>"; };
 		24AFD8131CB50C3F00C0F062 /* liblibContacts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibContacts.a; path = ../SDK/Libs/liblibContacts.a; sourceTree = "<group>"; };
 		24AFD8151CB50C4000C0F062 /* liblibIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibIO.a; path = ../SDK/Libs/liblibIO.a; sourceTree = "<group>"; };
 		24AFD8161CB50C4000C0F062 /* liblibLog.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibLog.a; path = ../SDK/Libs/liblibLog.a; sourceTree = "<group>"; };
@@ -841,6 +818,7 @@
 		360DC4E926451CBA00951296 /* mz_strm_os.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mz_strm_os.h; sourceTree = "<group>"; };
 		360DC4EA26451CBA00951296 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
 		360DC4EB26451CBA00951296 /* SSZipCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipCommon.h; sourceTree = "<group>"; };
+		36CB7C3B282E4B1700EFF9D9 /* PLVVodUniPlugin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PLVVodUniPlugin.framework; path = "PLV-VodUniPlugin/ios/PLVVodUniPlugin.framework"; sourceTree = "<group>"; };
 		6211582F4E40E111C17CF43D /* Pods-HBuilder-Vod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBuilder-Vod.debug.xcconfig"; path = "Target Support Files/Pods-HBuilder-Vod/Pods-HBuilder-Vod.debug.xcconfig"; sourceTree = "<group>"; };
 		67065F1E2243868300DC71CA /* Default-896h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-896h@2x.png"; sourceTree = "<group>"; };
 		67065F1F2243868300DC71CA /* Default-Landscape-812h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape-812h@3x.png"; sourceTree = "<group>"; };
@@ -952,17 +930,15 @@
 			files = (
 				8616F21825CA904E00FA9C42 /* liblibIO.a in Frameworks */,
 				362D0534264E0ED700244C76 /* liblibLog.a in Frameworks */,
-				0075EF0C24F6637F0036F902 /* PLVVodUniPlugin.framework in Frameworks */,
+				36CB7C3C282E4B1700EFF9D9 /* PLVVodUniPlugin.framework in Frameworks */,
 				005204B124F640890023AE9C /* liblibNativeUI.a in Frameworks */,
 				005204B524F640890023AE9C /* liblibUI.a in Frameworks */,
 				005204B724F640890023AE9C /* libcoreSupport.a in Frameworks */,
 				005204B824F640890023AE9C /* libSDWebImage.a in Frameworks */,
 				005204BB24F640890023AE9C /* liblibWebNavi.a in Frameworks */,
 				005204C724F640890023AE9C /* liblibNativeObj.a in Frameworks */,
-				005204D024F6408A0023AE9C /* liblibCamera.a in Frameworks */,
 				005204D124F6408A0023AE9C /* liblibPDRCore.a in Frameworks */,
 				005204D324F6408A0023AE9C /* liblibWeex.a in Frameworks */,
-				005204F224F6408A0023AE9C /* liblibNavigator.a in Frameworks */,
 				6731F3A4232F5B7A007838BC /* libresolv.tbd in Frameworks */,
 				2F0BA418215B8B5C00F67004 /* libbz2.1.0.tbd in Frameworks */,
 				24BD5AF61C994BB200B05AA2 /* libc++.tbd in Frameworks */,
@@ -979,14 +955,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0075EF0724F663540036F902 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0075EF0B24F663540036F902 /* PLVVodUniPlugin.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		360DC1AA2644E30D00951296 /* BDSClientEASRResources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1973,7 +1941,6 @@
 		8EED628F198A1D13000A4449 = {
 			isa = PBXGroup;
 			children = (
-				0075EF0624F663540036F902 /* PLVVodUniPlugin.xcodeproj */,
 				8EED62A1198A1D13000A4449 /* HBuilder-Vod */,
 				8EED629A198A1D13000A4449 /* Frameworks */,
 				8EED6299198A1D13000A4449 /* Products */,
@@ -1992,6 +1959,7 @@
 		8EED629A198A1D13000A4449 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				36CB7C3B282E4B1700EFF9D9 /* PLVVodUniPlugin.framework */,
 				0052048B24F640860023AE9C /* libalixpayment.a */,
 				005204A624F640890023AE9C /* libAMapImp.a */,
 				0052049D24F640880023AE9C /* libAMapLocationPlugin.a */,
@@ -2025,7 +1993,6 @@
 				0052048824F640860023AE9C /* liblibBeacon.a */,
 				0052048724F640860023AE9C /* liblibBlueTooth.a */,
 				0052047124F640840023AE9C /* liblibCache.a */,
-				0052047724F640840023AE9C /* liblibCamera.a */,
 				0052046924F640830023AE9C /* liblibContacts.a */,
 				0052048A24F640860023AE9C /* liblibFingerprint.a */,
 				0052047624F640840023AE9C /* liblibGeolocation.a */,
@@ -2037,7 +2004,6 @@
 				0052049024F640870023AE9C /* liblibMessage.a */,
 				0052046E24F640840023AE9C /* liblibNativeObj.a */,
 				0052045824F640810023AE9C /* liblibNativeUI.a */,
-				0052049924F640870023AE9C /* liblibNavigator.a */,
 				0052047424F640840023AE9C /* liblibNotification.a */,
 				0052049F24F640880023AE9C /* liblibOauth.a */,
 				0052049B24F640880023AE9C /* liblibOrientation.a */,
@@ -2157,7 +2123,6 @@
 				24AFD80F1CB50C3F00C0F062 /* liblibAccelerometer.a */,
 				24AFD8101CB50C3F00C0F062 /* liblibBarcode.a */,
 				24AFD8111CB50C3F00C0F062 /* liblibCache.a */,
-				24AFD8121CB50C3F00C0F062 /* liblibCamera.a */,
 				24AFD8131CB50C3F00C0F062 /* liblibContacts.a */,
 				24AFD8151CB50C4000C0F062 /* liblibIO.a */,
 				24AFD8161CB50C4000C0F062 /* liblibLog.a */,
@@ -2322,7 +2287,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				0075EF0E24F6639A0036F902 /* PBXTargetDependency */,
 			);
 			name = "HBuilder-Vod";
 			productName = "HBuilder-Hello";
@@ -2339,7 +2303,6 @@
 				ORGANIZATIONNAME = DCloud;
 				TargetAttributes = {
 					8EED6297198A1D13000A4449 = {
-						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -2357,28 +2320,12 @@
 			mainGroup = 8EED628F198A1D13000A4449;
 			productRefGroup = 8EED6299198A1D13000A4449 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 0075EF0724F663540036F902 /* Products */;
-					ProjectRef = 0075EF0624F663540036F902 /* PLVVodUniPlugin.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8EED6297198A1D13000A4449 /* HBuilder-Vod */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		0075EF0B24F663540036F902 /* PLVVodUniPlugin.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = PLVVodUniPlugin.framework;
-			remoteRef = 0075EF0A24F663540036F902 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8EED6296198A1D13000A4449 /* Resources */ = {
@@ -2482,9 +2429,9 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HBuilder-Vod/Pods-HBuilder-Vod-frameworks.sh",
+				"${PODS_ROOT}/PLVIJKPlayer/PLVIJKPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/PLVMarquee/PLVMarquee.framework",
 				"${BUILT_PRODUCTS_DIR}/PLVTimer/PLVTimer.framework",
-				"${PODS_ROOT}/PolyvIJKPlayer/PolyvIJKMediaFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLiteRepairKit/sqliterk.framework",
 				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
 				"${BUILT_PRODUCTS_DIR}/WCDB/WCDB.framework",
@@ -2492,9 +2439,9 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PLVIJKPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PLVMarquee.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PLVTimer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PolyvIJKMediaFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/sqliterk.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WCDB.framework",
@@ -2519,14 +2466,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0075EF0E24F6639A0036F902 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PLVVodUniPlugin;
-			targetProxy = 0075EF0D24F6639A0036F902 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		67E9CDCD22968D2E0076E0FB /* Localizable.strings */ = {
@@ -2632,6 +2571,7 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(SRCROOT)/../SDK/Libs",
+					"$(PROJECT_DIR)/PLV-VodUniPlugin/ios",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HBuilder-Vod/HBuilder-Vod-Prefix.pch";
@@ -2658,9 +2598,9 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uni.UNI53837B2;
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				PRODUCT_NAME = VodPluginDemo;
-				PROVISIONING_PROFILE = "a7e03077-46db-4b91-b0c4-20fd613c1e14";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 arm64";
@@ -2676,7 +2616,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -2685,6 +2625,7 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(SRCROOT)/../SDK/Libs",
+					"$(PROJECT_DIR)/PLV-VodUniPlugin/ios",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HBuilder-Vod/HBuilder-Vod-Prefix.pch";
@@ -2712,7 +2653,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uni.UNI53837B2;
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				PRODUCT_NAME = VodPluginDemo;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
