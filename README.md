@@ -1,3 +1,5 @@
+⚠️ **本仓库已废弃，请前往新仓库：[polyv-uniapp-vod-plugin](https://github.com/polyv/polyv-uniapp-vod-plugin)**
+
 ## PLVUniAppVodPlugin-iOS
 
 ### 项目介绍

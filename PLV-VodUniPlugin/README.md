@@ -1,4 +1,4 @@
-⚠️ **本仓库已废弃，请前往新仓库：[polyv-uniapp-vod-plugin](https://github.com/polyv/polyv-uniapp-vod-plugin)**
+
 
 该插件封装了保利威 Android 与 iOS 原生点播 SDK，集成了保利威常用的基本接口。使用本模块可以轻松把保利威 Android 与 iOS SDK 集成到自己的 app 中，实现保利威视频播放、下载等功能。想要集成本插件，需要在[保利威视频云平台](https://www.polyv.net/?f=dcloud_uniapp-211019)注册账号，并开通相关服务。
 
