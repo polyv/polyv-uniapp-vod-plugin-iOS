@@ -1,4 +1,4 @@
-
+⚠️ **本仓库已废弃，请前往新仓库：[polyv-uniapp-vod-plugin](https://github.com/polyv/polyv-uniapp-vod-plugin)**
 
 该插件封装了保利威 Android 与 iOS 原生点播 SDK，集成了保利威常用的基本接口。使用本模块可以轻松把保利威 Android 与 iOS SDK 集成到自己的 app 中，实现保利威视频播放、下载等功能。想要集成本插件，需要在[保利威视频云平台](https://www.polyv.net/?f=dcloud_uniapp-211019)注册账号，并开通相关服务。
 
@@ -7,6 +7,7 @@
 * 请务必通过 ConfigModule 的 setViewerId 设置观众ID，观众ID是后台区分用户的唯一标识别，可用于排查问题。
 - Android端自v0.1.0+已经解决云打包与uni-app官方原生插件`VideoPlayer（视频播放）`、`Payment（支付）`产生依赖冲突导致云打包失败的问题，**Android端集成请务必同时集成[Polyv播放器插件-Android](https://ext.dcloud.net.cn/plugin?id=4798)**。旧版本可以仍旧解决方案请点击文档说明：[《Android Uni app 插件冲突解决指南》](https://github.com/polyv/polyv-uniapp-cloudclass-plugin-android/wiki/Android-Uni-app-%E6%8F%92%E4%BB%B6%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3%E6%8C%87%E5%8D%97)
 - iOS 端自0.1.6+需要同时集成 [Polyv UTDID 插件-iOS](https://ext.dcloud.net.cn/plugin?id=7750)。如果本插件同时集成了 支付模块的支付宝支付 则不需要集成 [Polyv UTDID 插件-iOS] 插件
+- 此插件不支持Vue3，所以最好使用Vue2的版本进行开发。(可在 manifest.json 的基础配置中进行修改)
 
 ## 快速使用
 ### 播放器plv-player
